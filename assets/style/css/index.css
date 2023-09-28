@@ -20,7 +20,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
+  vertical-align: middle;
   text-decoration: none;
   color: black;
 }
@@ -78,6 +78,17 @@ p {
   background-color: #EEEEEE;
 }
 
+.cream-alpha-color {
+  color: rgba(251, 243, 161, 0.3882352941);
+}
+
+@media screen and (min-width: 1280px) {
+  .header__container--burger,
+  .profilarrow,
+  .collection {
+    cursor: pointer;
+  }
+}
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,4 +334,60 @@ p {
   .menu__ul--profil .menu__icon p {
     border-bottom: 0;
   }
+}
+.footer__container--gamegogsmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__container--gamegogsmenu .gamegogsmenu__about,
+.footer__container--gamegogsmenu .gamegogsmenu__help,
+.footer__container--gamegogsmenu .gamegogsmenu__join {
+  display: none;
+  margin-bottom: 40px;
+  width: 310px;
+}
+.footer__container--gamegogsmenu .gamegogsmenu__about.active,
+.footer__container--gamegogsmenu .gamegogsmenu__help.active,
+.footer__container--gamegogsmenu .gamegogsmenu__join.active {
+  display: block;
+}
+.footer__container--gamegogsmenu .gamegogs__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+}
+.footer__container--gamegogsmenu .gamegogs__title > p {
+  font-weight: 400;
+}
+.footer__container--gamegogsmenu .gamegogs__title .down {
+  rotate: 180deg;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+.footer__container--gamegogsmenu .gamegogsmenu__li {
+  text-align: center;
+  margin: 5px;
+  border-bottom: 1px solid rgba(251, 243, 161, 0.3882352941);
+}
+.footer__container--gamegogsmenu .gamegogsmenu__li > p {
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */

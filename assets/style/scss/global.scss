@@ -15,5 +15,21 @@ p {
 .white-bg {
     background-color: $white;
 }
+.cream-alpha-color {
+    color: $cream-alpha;
+}
+
+
+
+
+
+@media screen and (min-width:1280px) {
+    
+.header__container--burger,
+.profilarrow,
+.collection {
+    cursor: pointer;
+}
+}
 
 
