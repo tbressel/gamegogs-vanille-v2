@@ -12,22 +12,31 @@
         &.active {
             top: 0px;
         }
+
+        .profilarrow {
+                       
+            .down {
+            transition: 100ms ease-in-out;
+            rotate: 180deg;
+            }
+        }
     }
 
-    .menu__ul--profil {
-        position: relative;
-        z-index: -2;
-        top: -200px;
+}
 
-        &.active {
-            top: 0px;
-        }
+.menu__ul--profil {
+    position: relative;
+    z-index: -2;
+    top: -200px;
 
-        .menu__icon p {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid $cream;
-        }
-
+    &.active {
+        top: 0px;
     }
+
+    .menu__icon p {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid $cream;
+    }
+
 }

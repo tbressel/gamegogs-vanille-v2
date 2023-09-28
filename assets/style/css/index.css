@@ -287,15 +287,21 @@ p {
 .navigation__container .menu__ul.active {
   top: 0px;
 }
-.navigation__container .menu__ul--profil {
+.navigation__container .menu__ul .profilarrow .down {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  rotate: 180deg;
+}
+
+.menu__ul--profil {
   position: relative;
   z-index: -2;
   top: -200px;
 }
-.navigation__container .menu__ul--profil.active {
+.menu__ul--profil.active {
   top: 0px;
 }
-.navigation__container .menu__ul--profil .menu__icon p {
+.menu__ul--profil .menu__icon p {
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid #FBF4A1;
