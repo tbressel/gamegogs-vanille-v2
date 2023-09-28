@@ -1,0 +1,25 @@
+.navigation__container {
+    height: 0px;
+
+    .menu__ul {
+        position: relative;
+        top: -50px;
+        z-index: -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .menu__ul--profil {
+        position: relative;
+        z-index: -2;
+        top: -200px;
+
+        .menu__icon p {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid $cream;
+        }
+
+    }
+}

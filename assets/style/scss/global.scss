@@ -1,5 +1,13 @@
 body {
     min-width: 390px;
+    color: $cream;
+}
+
+p {
+    color: $cream;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 200;
 }
 .black-bg {
     background-color: $black;
@@ -7,4 +15,5 @@ body {
 .white-bg {
     background-color: $white;
 }
+
 

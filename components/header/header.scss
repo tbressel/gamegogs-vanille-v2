@@ -42,7 +42,7 @@
 
     .header__container--searchfield {
         width: 300px;
-        transition: 50ms ease-in-out;
+        transition: 100ms ease-in-out;
 
         .field-search {
             width: -webkit-fill-available;
@@ -114,7 +114,7 @@
             width: 270px;
             margin-top: auto;
             margin-bottom: auto;
-            transition: 50ms ease-in-out;
+            transition: 100ms ease-in-out;
 
 
             .field-search:focus-visible {
@@ -169,7 +169,7 @@
 
     .header__container--searchfield {
         width: 670px !important;
-        transition: 50ms ease-in-out;
+        transition: 100ms ease-in-out;
     }
 
      
