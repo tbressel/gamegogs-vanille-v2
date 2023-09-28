@@ -266,6 +266,9 @@ p {
     transition: 100ms ease-in-out;
   }
 }
+.navigation__container {
+  height: 0px;
+}
 .navigation__container .menu__ul {
   position: relative;
   top: -50px;
@@ -280,6 +283,9 @@ p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+.navigation__container .menu__ul.active {
+  top: 0px;
 }
 .navigation__container .menu__ul--profil {
   position: relative;
