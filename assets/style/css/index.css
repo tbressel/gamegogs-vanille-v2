@@ -292,6 +292,9 @@ p {
   z-index: -2;
   top: -200px;
 }
+.navigation__container .menu__ul--profil.active {
+  top: 0px;
+}
 .navigation__container .menu__ul--profil .menu__icon p {
   padding: 10px;
   text-align: center;
