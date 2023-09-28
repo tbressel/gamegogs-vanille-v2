@@ -1,28 +1,15 @@
-// ---------------------------------------------------------------
-// -------------------- global declaration -----------------------
-// ---------------------------------------------------------------
-let BurgerMenuState = false;
-let SubMenuState = false;
-
-
 
 // ---------------------------------------------------------------
 // ---------------------- functions declaration ------------------
 // ---------------------------------------------------------------
-function toggleBurgerMenu(event) {
-    document.querySelector(`.navigation__container .${event.target.getAttribute('data-set')}`).classList.toggle('active');
-    BurgerMenuState = !BurgerMenuState;
-}
 
 function toggleSubMenu(event) {
-    document.querySelector(`.navigation__container .${event.target.getAttribute('data-set')}`).classList.toggle('active');
-    SubMenuState = !SubMenuState;
+    document.querySelector(`.submenu__container .${event.target.getAttribute('data-set')}`).classList.toggle('active');
     reverseProfilArrow();
 }
 
 function closeSubMenu() {
-    document.querySelector(`.navigation__container .menu__ul--profil`).classList.toggle('active');
-    SubMenuState = !SubMenuState; 
+    document.querySelector(`.submenu__container .menu__ul--profil`).classList.toggle('active');
 }
 
 function reverseProfilArrow() {
@@ -34,16 +21,11 @@ function reverseProfilArrow() {
 // ---------------------------------------------------------------
 // ------ Listener on the burger button and active class state ---
 // ---------------------------------------------------------------
-document.getElementById('burger-btn').addEventListener('click', (event) => {
-    toggleBurgerMenu(event);
-    // test if sub menu is active, if it is, we close it
-    if (SubMenuState) {
-        closeSubMenu();
-        reverseProfilArrow();
-    }
 
-})
-document.getElementById('profilarrow-btn-mobile').addEventListener('click', (event) => {
+document.getElementById('burger-btn').addEventListener('click', (event) => {
     toggleSubMenu(event);
 })
 
+document.getElementById('profilarrow-btn-mobile').addEventListener('click', (event) => {
+    toggleSubMenu(event);
+})
