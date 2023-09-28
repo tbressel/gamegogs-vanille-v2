@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
 
-    .header__container--top {
+    .header__container--top,
+    .header__container--bot {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
 
         .header__container--brandname {
             display: flex;
@@ -39,31 +40,116 @@
         }
     }
 
-    .header__container--bot {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
 
-        .header__container--searchfield .field-search {
+
+    .header__container--searchfield {
+        width: 300px;
+
+
+        .field-search {
+            width: -webkit-fill-available;
             height: 30px;
-            width: 345px;
             border-radius: 5px;
-           margin-left: -10px;
-            // border-color: $black;
-            transition: 500ms ease-in-out;
+            transition: 300ms ease-in-out;
+
 
             &:focus-visible {
-                height: 40px;
-                transition: 500ms ease-in-out;
-                font-size: 1.2em;
+                height: 35px;
+                font-size: 1.2rem;
+                transition: 300ms ease-in-out;
+                border-color: $cream;
+            }
+        }
+    }
+
+    .header__container--zoom {
+        margin-left: -35px;
+
+        & img {
+            height: 25px;
+            padding: 4px;
+        }
+    }
+
+}
+
+@media screen and (min-width : 744px) {
+
+    body {
+        background-color: red;
+    }
+
+
+    .header__container {
+        flex-direction: row;
+
+        .header__container--top {
+            .header__container--burger {
+                display: none;
+            }
+
+            .header__container--brandname {
+                .brandname__top {
+
+                    & img {
+                        height: 20px;
+                    }
+                }
+
+                .brandname__bot {
+                    .brandname__bot--hook {
+
+                        & img {
+                            height: 8px;
+                            width: 176px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__container--searchfield {
+            width: 200px;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            .field-search {
+                width: auto;
             }
         }
 
         .header__container--zoom {
-            height: 30px;
-            margin-left: -35px;
+            margin-top: auto;
+            margin-bottom: auto;
+
         }
+
+
+        .header__container--menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+
+            .menu__ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .menu__icon {
+                    & img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+
+            }
+
+
+        }
+
+
     }
+
 }
