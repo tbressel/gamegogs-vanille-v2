@@ -92,16 +92,88 @@
   font-size: 1.2rem;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+  border-color: #FBF4A1;
 }
 .header__container .header__container--zoom {
   margin-left: -35px;
 }
 .header__container .header__container--zoom img {
   height: 25px;
+  padding: 4px;
+}
+.header__container .header__container--menu {
+  display: none;
 }
 
-@media screen and (min-width: 477px) {
+@media screen and (min-width: 744px) {
   body {
     background-color: red;
+  }
+  .header__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header__container .header__container--top .header__container--burger {
+    display: none;
+  }
+  .header__container .header__container--top .header__container--brandname .brandname__top img {
+    height: 20px;
+  }
+  .header__container .header__container--top .header__container--brandname .brandname__bot .brandname__bot--hook img {
+    height: 8px;
+    width: 176px;
+  }
+  .header__container .header__container--searchfield {
+    width: 270px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .header__container .header__container--searchfield .field-search:focus-visible {
+    font-size: 1rem;
+  }
+  .header__container .header__container--zoom {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .header__container .header__container--menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__container .header__container--menu .menu__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__container .header__container--menu .menu__ul .menu__icon img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background-color: rgb(43, 204, 25);
+  }
+  .header__container--searchfield {
+    width: 670px;
   }
 }/*# sourceMappingURL=header.css.map */

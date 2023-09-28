@@ -87,6 +87,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__container .header__container--top .header__container--brandname,
 .header__container .header__container--bot .header__container--brandname {
@@ -147,6 +150,8 @@ body {
 }
 .header__container .header__container--searchfield {
   width: 300px;
+  -webkit-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out;
 }
 .header__container .header__container--searchfield .field-search {
   width: -webkit-fill-available;
@@ -196,16 +201,14 @@ body {
     width: 176px;
   }
   .header__container .header__container--searchfield {
-    width: 200px;
+    width: 270px;
     margin-top: auto;
     margin-bottom: auto;
+    -webkit-transition: 50ms ease-in-out;
+    transition: 50ms ease-in-out;
   }
   .header__container .header__container--searchfield .field-search:focus-visible {
-    height: 35px;
     font-size: 1rem;
-    -webkit-transition: 300ms ease-in-out;
-    transition: 300ms ease-in-out;
-    border-color: #FBF4A1;
   }
   .header__container .header__container--zoom {
     margin-top: auto;
@@ -244,5 +247,10 @@ body {
 @media screen and (min-width: 1280px) {
   body {
     background-color: rgb(43, 204, 25);
+  }
+  .header__container--searchfield {
+    width: 670px !important;
+    -webkit-transition: 50ms ease-in-out;
+    transition: 50ms ease-in-out;
   }
 }/*# sourceMappingURL=index.css.map */
