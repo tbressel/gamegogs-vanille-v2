@@ -57,7 +57,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 15px;
+        margin: 10px;
 
 
         &>p {
@@ -65,14 +65,10 @@
         }
 
     }
-
-    .socialnetwork__block {
-
-        .socialnetworkmenu__follow {       
-            flex-direction: column !important;
-            align-items: flex-start;
-            margin: 10px;            
-        }
+    .socialnetworkmenu__follow {       
+        flex-direction: column !important;
+        align-items: flex-start;
+        margin: 10px;            
     }
 
     .socialnetworkmenu__li {

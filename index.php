@@ -15,22 +15,20 @@
     <header class="black-bg">
         <?php include('./components/header/header.php'); ?>
     </header>
+
+
     <nav class="submenu__container">
         <?php include('./components/header//nagivation/navigation.php'); ?>
     </nav>
 
-    <main></main>
-    <style>
-        main {
-            height: 500px;
-        }
-    </style>
 
 
     <footer class="black-bg">
         <div class="footer__container">
             <?php include ('./components/footer/social-networks/social-networks.php'); ?>
             <?php include('./components/footer/about/about.php'); ?>
+
+            <?php include('./components/footer/logo/logo.php'); ?>
             <?php include('./components/footer/rgpd/rgpd.php'); ?>
         </div>
     </footer>
