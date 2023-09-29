@@ -366,6 +366,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 .footer__container--gamegogsmenu .gamegogs__block {
   display: -webkit-box;
@@ -375,6 +376,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 .footer__container--gamegogsmenu .gamegogsmenu__about,
 .footer__container--gamegogsmenu .gamegogsmenu__help,
@@ -408,7 +410,11 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 15px;
+  margin: 10px;
+}
+.footer__container--gamegogsmenu .gamegogs__title img {
+  width: 20px;
+  height: 20px;
 }
 .footer__container--gamegogsmenu .gamegogs__title > p {
   font-weight: 400;
@@ -494,7 +500,7 @@ p {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 10px;
+  margin: 40px;
 }
 .socialnetworks__container .socialnetwork__block .socialnetworkmenu__text {
   display: none;
@@ -554,5 +560,69 @@ p {
   }
   .socialnetworkmenu__li {
     margin-bottom: 20px;
+  }
+}
+.rgpd__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.rgpd__container .rgpd__block {
+  width: 100%;
+}
+.rgpd__container .rgpd__block .rgpdmenu__rgpd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+.rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li {
+  margin-bottom: 20px;
+}
+.rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li .rgpdmenu__text > a {
+  color: #FBF4A1;
+  font-weight: 400;
+}
+.rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li .rgpdmenu__text a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1280px) {
+  .rgpd__container {
+    width: 70%;
+  }
+  .rgpd__container .rgpd__block {
+    width: 100%;
+  }
+  .rgpd__container .rgpd__block .rgpdmenu__rgpd {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li {
+    margin-bottom: 20px;
+  }
+  .rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li .rgpdmenu__text > a {
+    color: #FBF4A1;
+    font-weight: 400;
+  }
+  .rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li .rgpdmenu__text a:hover {
+    text-decoration: underline;
   }
 }/*# sourceMappingURL=index.css.map */
