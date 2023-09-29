@@ -16,7 +16,6 @@
     .gamegogsmenu__join {
         display: none;
         flex-direction: column;
-        margin-bottom: 40px;
         width: 100%;
 
         &.active {
@@ -39,6 +38,7 @@
 
         &>p {
             font-weight: 400;
+            padding-bottom: 10px;
         }
 
         .down {
@@ -54,7 +54,7 @@
         border-bottom: 1px solid $cream-alpha;
 
         &>p {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 }
@@ -85,6 +85,9 @@
 
             img {
                 display: none;
+            }
+            &>p {
+                padding-bottom: 0px;
             }
         }
     }

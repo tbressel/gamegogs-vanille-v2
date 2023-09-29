@@ -1,6 +1,6 @@
 .rgpd__container {
     display: flex;
-    order: 3;
+    order: 4;
 
     .rgpd__block {
         width: 100%;
@@ -19,6 +19,7 @@
                     &>a {
                         color:$cream;
                         font-weight: 400;
+                        font-size: 12px;
                     }
 
                     a:hover {
@@ -53,17 +54,7 @@
                 .rgpdmenu__li {
                     margin-bottom: 20px;
     
-                    .rgpdmenu__text {
-                        
-                        &>a {
-                            color:$cream;
-                            font-weight: 400;
-                        }
-    
-                        a:hover {
-                            text-decoration: underline;
-                        }
-                    }
+
                 }
             }
         }
