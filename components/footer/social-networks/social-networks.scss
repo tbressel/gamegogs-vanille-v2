@@ -1,0 +1,36 @@
+.socialnetworks__container {
+    order: 0;
+
+
+    .socialnetwork__block {
+        display: flex;
+        flex-direction: column;
+
+        .socialnetwork__title {
+            display: none;
+        }
+
+        .socialnetworkmenu__follow {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+
+@media screen and (min-width:744px) {
+    .socialnetworks__container {
+        order: 1;
+
+
+
+    }
+
+    
+}
+
+@media screen and (min-width:1280px) {
+ 
+
+
+}

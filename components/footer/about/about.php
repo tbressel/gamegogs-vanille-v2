@@ -1,12 +1,11 @@
 <?php
 echo ('
-    <div class="footer__container">
+    
             <div id="footer-menu" class="footer__container--gamegogsmenu">
+<div class="gamegogs__block">
                 <div class="gamegogs__title">
-                    <p>A propos de Gamegogs <img src="./assets/svg/arrowprofil-icon.svg" alt="arrow"
-                            data-set="about__ul"></p>
+                        <p>A propos de Gamegogs <img src="./assets/svg/arrowprofil-icon.svg" alt="arrow" data-set="about__ul"></p>
                 </div>
-
                 <ul id="about__ul" class="gamegogsmenu__about">
                     <li class="gamegogsmenu__li">
                         <p>A propos de gamegogs</p>
@@ -18,6 +17,10 @@ echo ('
                         <p>API</p>
                     </li>
                 </ul>
+</div>
+
+
+<div class="gamegogs__block">
                 <div class="gamegogs__title">
                     <p>Voici de l\'aide <img src="./assets/svg/arrowprofil-icon.svg" alt="arrow" data-set="help__ul"></p>
                 </div>
@@ -35,6 +38,8 @@ echo ('
                         <p>Guide d\'utilisation de la base de données</p>
                     </li>
                 </ul>
+</div>
+<div class="gamegogs__block">
                 <div class="gamegogs__title">
                     <p>Rejoingnez-nous <img src="./assets/svg/arrowprofil-icon.svg" alt="arrow" data-set="join__ul"></p>
                 </div>
@@ -58,7 +63,6 @@ echo ('
                         <p>Liste des contributeurs</p>
                     </li>
                 </ul>
+</div>
             </div>
-        </div>');
-
-        ?>
+        ');

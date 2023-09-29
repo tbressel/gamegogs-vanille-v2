@@ -335,6 +335,16 @@ p {
     border-bottom: 0;
   }
 }
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .footer__container--gamegogsmenu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,17 +357,32 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
+.footer__container--gamegogsmenu .gamegogs__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .footer__container--gamegogsmenu .gamegogsmenu__about,
 .footer__container--gamegogsmenu .gamegogsmenu__help,
 .footer__container--gamegogsmenu .gamegogsmenu__join {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 40px;
-  width: 310px;
+  width: 100%;
 }
 .footer__container--gamegogsmenu .gamegogsmenu__about.active,
 .footer__container--gamegogsmenu .gamegogsmenu__help.active,
 .footer__container--gamegogsmenu .gamegogsmenu__join.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .footer__container--gamegogsmenu .gamegogs__title {
   display: -webkit-box;
@@ -385,9 +410,79 @@ p {
 }
 .footer__container--gamegogsmenu .gamegogsmenu__li {
   text-align: center;
-  margin: 5px;
+  margin-bottom: 15px;
   border-bottom: 1px solid rgba(251, 243, 161, 0.3882352941);
 }
 .footer__container--gamegogsmenu .gamegogsmenu__li > p {
   font-size: 14px;
+}
+
+@media screen and (min-width: 744px) {
+  .footer__container--gamegogsmenu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer__container--gamegogsmenu .gamegogsmenu__about,
+  .footer__container--gamegogsmenu .gamegogsmenu__help,
+  .footer__container--gamegogsmenu .gamegogsmenu__join {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 15px;
+  }
+  .footer__container--gamegogsmenu .gamegogsmenu__li {
+    border-bottom: 0px;
+  }
+  .footer__container--gamegogsmenu .gamegogs__title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer__container--gamegogsmenu .gamegogs__title img {
+    display: none;
+  }
+}
+.socialnetworks__container {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.socialnetworks__container .socialnetwork__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.socialnetworks__container .socialnetwork__block .socialnetwork__title {
+  display: none;
+}
+.socialnetworks__container .socialnetwork__block .socialnetworkmenu__follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (min-width: 744px) {
+  .socialnetworks__container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }/*# sourceMappingURL=index.css.map */
