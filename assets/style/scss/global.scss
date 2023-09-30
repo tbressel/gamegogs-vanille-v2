@@ -1,4 +1,6 @@
 body {
+    position: relative;
+    z-index: -10;
     min-width: 390px;
     color: $cream;
 }
@@ -14,6 +16,23 @@ p {
     font-size: 16px;
     font-weight: 200;
 }
+
+input {
+    height: 30px;
+    background-color: $white;
+    border-radius:  5px;
+    transition: 300ms ease-in-out;
+    margin-bottom: 10px;
+
+    &:focus-visible {
+        height: 35px;
+        font-size: 1.2rem;
+        transition: 300ms ease-in-out;
+        border-color: $cream;
+    }
+
+}
+
 
 .black-bg {
     background-color: $black;
