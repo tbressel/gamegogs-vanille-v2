@@ -7,18 +7,19 @@
 }
 
 .submenu__container {
-    height: 0px;
+    height: 90px;
 
     .menu__ul {
-        position: relative;
+        position: fixed;
         top: -50px;
+        width: 100%;
         z-index: -1;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
 
         &.active {
-            top: 0px;
+            top: 98px;
         }
 
     }
@@ -31,7 +32,7 @@
     top: -200px;
 
     &.active {
-        top: 0px;
+        top: 98px;
     }
 
     .menu__icon p {
@@ -49,6 +50,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    &.active {
+        top: 55px;
+    }
 
     .menu__icon p {
         border-bottom: 0;

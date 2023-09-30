@@ -63,6 +63,10 @@ body {
   color: #FBF4A1;
 }
 
+header {
+  position: fixed;
+}
+
 p {
   color: #FBF4A1;
   font-family: Inter;
@@ -95,6 +99,7 @@ p {
   }
 }
 .header__container {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,6 +107,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 .header__container .header__container--top,
 .header__container .header__container--bot {
@@ -283,11 +289,12 @@ p {
 }
 
 .submenu__container {
-  height: 0px;
+  height: 90px;
 }
 .submenu__container .menu__ul {
-  position: relative;
+  position: fixed;
   top: -50px;
+  width: 100%;
   z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -301,7 +308,7 @@ p {
           justify-content: space-evenly;
 }
 .submenu__container .menu__ul.active {
-  top: 0px;
+  top: 98px;
 }
 
 .menu__ul--profil {
@@ -310,7 +317,7 @@ p {
   top: -200px;
 }
 .menu__ul--profil.active {
-  top: 0px;
+  top: 98px;
 }
 .menu__ul--profil .menu__icon p {
   padding: 10px;
@@ -329,6 +336,9 @@ p {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .menu__ul--profil.active {
+    top: 55px;
   }
   .menu__ul--profil .menu__icon p {
     border-bottom: 0;
@@ -747,6 +757,12 @@ p {
   text-align: center;
 }
 .lastarticles__container .article__container .title__container .title__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   top: -70px;
   height: 70px;
