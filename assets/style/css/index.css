@@ -218,6 +218,7 @@ input:focus-visible {
 .header__container .header__container--zoom img {
   height: 25px;
   padding: 4px;
+  margin-bottom: 10px;
 }
 .header__container .header__container--menu {
   display: none;
