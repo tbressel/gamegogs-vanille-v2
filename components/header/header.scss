@@ -76,11 +76,6 @@
 
 @media screen and (min-width : 744px) {
 
-    body {
-        background-color: red;
-    }
-
-
     .header__container {
         flex-direction: row;
         justify-content: space-around;
@@ -162,11 +157,6 @@
 }
 
 @media screen and (min-width : 1280px) {
-    body {
-        background-color: rgb(43, 204, 25);
-    }
-
-
     .header__container--searchfield {
         width: 670px !important;
         transition: 100ms ease-in-out;

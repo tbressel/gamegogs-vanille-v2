@@ -18,47 +18,50 @@
 
 
     <nav class="submenu__container">
-        <?php include('./components/header//nagivation/navigation.php'); ?>
+        <?php include('./components/header/nagivation/navigation.php'); ?>
     </nav>
 
-    <main>
-        <!-- <?php include('./pages/main/main.php'); ?> -->
-        <!-- <?php include('./pages/collection/collection.php'); ?> -->
-
-        <div class="collection__main-container">
-
-            <nav class="filter__navigation black-bg">
-                <div class="filter__container">
-                    <div class="filter__button">
-                        <img src="./assets/svg/plus-btn.svg" alt="plus button"><span>Filtre</span>
-                    </div>
-                </div>
-                <div class="views__buttons">
-
-                    <div class="view1">
-                        <img src="./assets/svg/view1.svg" alt="view1">
-                    </div>
-                    <div class="view2">
-                        <img src="./assets/svg/view2.svg" alt="view2">
-                    </div>
-                    <div class="view3">
-                        <img src="./assets/svg/view3.svg" alt="view3">
-                    </div>
-
-                </div>
-            </nav>
-
-
-            <h1>TITRE DE LA PAGE</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quasi qui explicabo at quo laboriosam ea asperiores rerum magni molestias. Ducimus earum provident rerum aliquam? Eius ducimus deleniti veniam ut.
-            </p>
+    <main class="main__container">
+    <section class="lastarticles__container">
+        <div class="article__container">
+            <div class="image__article">
+                <!-- <img src="./assets/medias/img/top10-rares.webp" alt="top 10 des jeux les plus rares"> -->
+            </div>
+            <div class="title__article">
+                <p>
+                    TOP 10 des jeux les plus rares
+                </p>
+            </div>
         </div>
 
+        <div class="article__container">
+            <div class="image__article">
+                <!-- <img src="./assets/medias/img/top10-expensives.webp" alt="top 10 des jeux les plus chers"> -->
+            </div>
+            <div class="title__article">
+                <p>
+                    TOP 10 des jeux les plus chers
+                </p>
+            </div>
+        </div>
+
+        <div class="article__container">
+            <div class="image__article">
+                <!-- <img src="./assets/medias/img/sell-bilan2022.png" alt="S.E.L.L : Le bilan 2022 du marché du jeux vidéo"> -->
+            </div>
+            <div class="title__article">
+                <p>
+                    S.E.L.L : Le bilan 2022 du marché du jeux vidéo
+                </p>
+            </div>
+        </div>
+    </section>
 
 
 
 
+
+        <!-- <?php include('./pages/main/main.php'); ?> -->
     </main>
 
     <footer class="black-bg">

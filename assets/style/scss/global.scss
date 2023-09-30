@@ -9,27 +9,32 @@ p {
     font-size: 16px;
     font-weight: 200;
 }
+
 .black-bg {
     background-color: $black;
 }
+
 .white-bg {
     background-color: $white;
 }
+
 .cream-alpha-color {
     color: $cream-alpha;
 }
 
+.main__container {
+    position: relative;
+    z-index: -3;
+}
 
 
 
 
 @media screen and (min-width:1280px) {
-    
-.header__container--burger,
-.profilarrow,
-.collection {
-    cursor: pointer;
-}
-}
 
-
+    .header__container--burger,
+    .profilarrow,
+    .collection {
+        cursor: pointer;
+    }
+}

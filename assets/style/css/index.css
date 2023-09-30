@@ -82,6 +82,11 @@ p {
   color: rgba(251, 243, 161, 0.3882352941);
 }
 
+.main__container {
+  position: relative;
+  z-index: -3;
+}
+
 @media screen and (min-width: 1280px) {
   .header__container--burger,
   .profilarrow,
@@ -202,9 +207,6 @@ p {
 }
 
 @media screen and (min-width: 744px) {
-  body {
-    background-color: red;
-  }
   .header__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -268,9 +270,6 @@ p {
   }
 }
 @media screen and (min-width: 1280px) {
-  body {
-    background-color: rgb(43, 204, 25);
-  }
   .header__container--searchfield {
     width: 670px !important;
     -webkit-transition: 100ms ease-in-out;
