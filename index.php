@@ -22,46 +22,7 @@
     </nav>
 
     <main class="main__container">
-    <section class="lastarticles__container">
-        <div class="article__container">
-            <div class="image__article">
-                <!-- <img src="./assets/medias/img/top10-rares.webp" alt="top 10 des jeux les plus rares"> -->
-            </div>
-            <div class="title__article">
-                <p>
-                    TOP 10 des jeux les plus rares
-                </p>
-            </div>
-        </div>
-
-        <div class="article__container">
-            <div class="image__article">
-                <!-- <img src="./assets/medias/img/top10-expensives.webp" alt="top 10 des jeux les plus chers"> -->
-            </div>
-            <div class="title__article">
-                <p>
-                    TOP 10 des jeux les plus chers
-                </p>
-            </div>
-        </div>
-
-        <div class="article__container">
-            <div class="image__article">
-                <!-- <img src="./assets/medias/img/sell-bilan2022.png" alt="S.E.L.L : Le bilan 2022 du marché du jeux vidéo"> -->
-            </div>
-            <div class="title__article">
-                <p>
-                    S.E.L.L : Le bilan 2022 du marché du jeux vidéo
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-        <!-- <?php include('./pages/main/main.php'); ?> -->
+            <?php include('./pages/home/home.php'); ?>
     </main>
 
     <footer class="black-bg">

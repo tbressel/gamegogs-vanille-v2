@@ -1,11 +1,41 @@
 .lastarticles__container {
-    .article__container {
-        .image__article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
+    .article__container {
+        height: 245px;
+        width: 180px;
+        margin: 20px 0;
+
+        .image__article {
+            border-radius: 10px;            
+            overflow: hidden;
         }
 
-        .title__article {
-            
+        .title__container {
+           
+            text-align: center;
+           
+            .title__article {
+                position: relative;
+                top: -70px;
+                height: 70px;
+                width: 180px;
+                max-width: 180px;
+                max-height: 70px;
+                border-radius: 0 0 10px 10px;
+                background: linear-gradient(90deg, $golden, $whiteFF, $rust);
+                
+                &>p {
+
+                    color: black;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+            }
         }
     }
 }
