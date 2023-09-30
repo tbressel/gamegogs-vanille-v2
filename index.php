@@ -35,10 +35,11 @@
     </footer>
 
 
-
+<?php include('./include/dbconnect.php'); ?>
 
     
     <script src="./assets/scripts/script.js"></script>
+
 </body>
 
 </html>
