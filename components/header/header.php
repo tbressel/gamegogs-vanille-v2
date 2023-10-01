@@ -8,7 +8,7 @@ echo (' <div class="header__container black-bg">
                             <img src="./assets/svg/joystick.svg" alt="joystick icon">
                         </div>
                         <div class="brandname__top--title">
-                            <img src="./assets/svg/gamegog-logo.svg" alt="gamegog logo">
+                            <a href="./includes/dbconnect.php"><img src="./assets/svg/gamegog-logo.svg" alt="gamegog logo"></a>
                         </div>
                     </div>
 

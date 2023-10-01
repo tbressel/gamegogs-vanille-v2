@@ -1,6 +1,6 @@
 <?php 
 echo('<ul class="menu__ul--profil black-bg">
-            <li class="menu__icon collection">
+            <li id="collection" class="menu__icon collection">
                 <!-- <img src="./assets/svg/collection-icon.svg" alt="my collection"> -->
                 <p>Ma collection</p>
             </li>

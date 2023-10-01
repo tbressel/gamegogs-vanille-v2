@@ -1,0 +1,50 @@
+.overlay__maincontainer {
+  position: fixed;
+  z-index: 3;
+  border: 2px solid red;
+  width: 340px;
+  height: 100vh;
+  top: 65px;
+  left: -350px;
+  overflow-y: scroll;
+}
+.overlay__maincontainer .active {
+  left: 0px;
+}
+.overlay__maincontainer .overlay__box--filter {
+  border: 2px dotted red;
+}
+.overlay__maincontainer .overlay__box--filter .title__filter > h2 {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 27px;
+}
+.overlay__maincontainer .overlay__box--filter .list__filter--box {
+  border: 2px solid rgb(29, 194, 37);
+}
+.overlay__maincontainer .overlay__box--filter .list__filter--box .filters-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px dotted rgb(29, 194, 37);
+}
+.overlay__maincontainer .overlay__box--filter .list__filter--box .filters-box .name_filter > p {
+  color: aqua;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.overlay__maincontainer .overlay__box--filter .list__filter--box .filters-box .quantity_filter > p {
+  color: rgb(180, 177, 174);
+}/*# sourceMappingURL=filter-overlay.css.map */

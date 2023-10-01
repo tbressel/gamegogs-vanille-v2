@@ -1,0 +1,10 @@
+[
+    {
+        "id_user": 1,
+        "name_user": "Bressel",
+        "firstname_user": "Thomas",
+        "pseudo_user": "zisquier",
+        "password_user": "pass",
+        "games_user": [3,7,9,1,2]
+    }
+]
