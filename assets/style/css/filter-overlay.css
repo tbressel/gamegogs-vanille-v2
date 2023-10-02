@@ -6,9 +6,13 @@
   top: 170px;
   left: -350px;
   overflow-y: auto;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 .overlay__maincontainer.show {
   left: 0px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .overlay__box--filter .title__filter > h2 {

@@ -30,9 +30,21 @@ input {
         transition: 300ms ease-in-out;
         border-color: $cream;
     }
-
 }
 
+h3 {
+    margin-top: 10px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+h4 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+}
 
 .black-bg {
     background-color: $black;
@@ -52,6 +64,10 @@ input {
 
 .bluedark-color {
     color : $bluedark;
+}
+
+.green-color {
+    color: $green !important;
 }
 
 .main__container {

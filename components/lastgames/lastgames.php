@@ -33,7 +33,7 @@
             <h4>sous titre</h4>
         </div>
         <div class="lastgames-items__plateform">
-            <p>plateforme</p>
+            <img src="./assets/img/plateforms/sony-playstation4.png" alt="plateform label">
         </div>
     </div>
 

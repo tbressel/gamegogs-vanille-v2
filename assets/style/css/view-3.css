@@ -359,9 +359,9 @@ First Part of CSS collection view 1
 .collection-items__coverimage img {
   -webkit-box-shadow: 5px 5px 5px var(--clr__grey6D);
           box-shadow: 5px 5px 5px var(--clr__grey6D);
-  width: 100px;
+  width: 140px;
   height: auto;
-  min-height: 80px;
+  min-height: 140px;
 }
 
 .collection-items__coverimage {
@@ -372,8 +372,8 @@ First Part of CSS collection view 1
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   text-align: center;
 }
 
@@ -425,7 +425,6 @@ First Part of CSS collection view 2
   height: -moz-fit-content;
   height: fit-content;
   background-color: aliceblue;
-  /* padding: 5px; */
 }
 
 .collection-basicinfos__subcontainer {

@@ -36,6 +36,11 @@
         top: 98px;
     }
 
+    .collection {
+        cursor: pointer;
+    }
+
+
     .menu__icon p {
         padding: 10px;
         text-align: center;
@@ -43,6 +48,7 @@
     }
 
 }
+
 
 
 @media screen and (min-width:744px) {
@@ -54,6 +60,7 @@
 
     &.active {
         top: 55px;
+        padding-top: 20px;
     }
 
     .menu__icon p {

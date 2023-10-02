@@ -30,6 +30,11 @@ flex-direction: row;
 justify-content: space-around;
 flex-wrap: wrap;
 width: 100%;
+
+p {
+    color: $black;
+    font-weight: 400;
+}
 }
 .myitems-items__last-items {
     display: flex;
@@ -263,17 +268,17 @@ min-height: 150px;
 
 .collection-items__coverimage img{
     box-shadow: 5px 5px 5px var(--clr__grey6D);
-    width: 100px;
+    width: 140px;
     height: auto;
-    min-height: 80px;
+    min-height: 140px;
 }
 
 .collection-items__coverimage {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     text-align: center;
 }
 
@@ -301,9 +306,6 @@ First Part of CSS collection view 2
     margin-top:45px
 }
 
-
-
-
 .myitems-maxitem__price{
     margin-top: 15px;
     margin-left: 10%;
@@ -319,39 +321,90 @@ First Part of CSS collection view 2
     justify-content: flex-start;
     width: 100vw;
     height: fit-content;
-    background-color: aliceblue;
-    /* padding: 5px; */
+    background-color: $white;
+    border-bottom: 1px solid $black;
+
+
   
 }
 .collection-basicinfos__subcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+
+    &.view3 {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 5px;
+    }
+
 }
 
 
+
+.collection-statesinfos__subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+
+    .collection-items__prices,
+    .collection-items__date,
+    .collection-items__state {
+        margin-bottom: 4px;
+        span {
+            font-weight: 600;
+        };
+
+    }
+}
+
+.checkbox {
+    cursor: pointer;
+    border-color: $golden;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
 .select__bar {
     display: flex;
-    width: 22px;
-    background-color:rgb(220, 220, 245);
+    justify-content: center;
+    width: 80px;
+    background-color:$black;
 }
 
 .collection-basicinfos__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
+    width: 80%;
     padding: 5px;
 }
 
 
+
+
 .collection-arrow {
     position: absolute;
-    right: 40px;
+    right: 0px;
 }
 
 .collection-items__title {
-    margin-top: -5px;
+    border-radius: 5px;
+    word-break: break-word;
+    margin: 0 6px;
+    background-color: $whiteFF;
+
+    h3 {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 5px;;
+    }
+
 }
 
 .collection-items__subtitle,
@@ -359,6 +412,7 @@ First Part of CSS collection view 2
 .collection-items__year,
 .collection-items__plateform {
     padding: 2px;
+    margin-right: 5%;
 }
 
 .bot-items__subcontainer {
@@ -403,3 +457,4 @@ First Part of CSS collection view 2
 .form-notes {
     text-align: center;
 }
+
