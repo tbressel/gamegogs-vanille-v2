@@ -40,7 +40,8 @@
 
 
 
-    
+    <script src="./assets/scripts/variables.js"></script>
+    <script src="./assets/scripts/functions.js"></script>
     <script src="./assets/scripts/script.js"></script>
 
 </body>

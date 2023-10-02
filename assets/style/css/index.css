@@ -100,8 +100,16 @@ input:focus-visible {
   background-color: #EEEEEE;
 }
 
+.whiteFF-bg {
+  background-color: #FFFFFF;
+}
+
 .cream-alpha-color {
   color: rgba(251, 243, 161, 0.3882352941);
+}
+
+.bluedark-color {
+  color: #2400ff;
 }
 
 .main__container {
@@ -2686,29 +2694,23 @@ First Part of CSS collection view 2
 .overlay__maincontainer {
   position: fixed;
   z-index: 3;
-  border: 2px solid red;
   width: 340px;
   height: 100vh;
-  top: 65px;
+  top: 170px;
   left: -350px;
   overflow-y: scroll;
 }
-.overlay__maincontainer .active {
+.overlay__maincontainer.show {
   left: 0px;
 }
-.overlay__maincontainer .overlay__box--filter {
-  border: 2px dotted red;
-}
-.overlay__maincontainer .overlay__box--filter .title__filter > h2 {
+
+.overlay__box--filter .title__filter > h2 {
   font-family: "Inter";
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 27px;
 }
-.overlay__maincontainer .overlay__box--filter .list__filter--box {
-  border: 2px solid rgb(29, 194, 37);
-}
-.overlay__maincontainer .overlay__box--filter .list__filter--box .filters-box {
+.overlay__box--filter .list__filter--box .filters-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2722,14 +2724,12 @@ First Part of CSS collection view 2
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px dotted rgb(29, 194, 37);
 }
-.overlay__maincontainer .overlay__box--filter .list__filter--box .filters-box .name_filter > p {
-  color: aqua;
+.overlay__box--filter .list__filter--box .filters-box .name_filter > p {
   font-size: 14px;
   font-weight: 400;
   line-height: 27px;
 }
-.overlay__maincontainer .overlay__box--filter .list__filter--box .filters-box .quantity_filter > p {
+.overlay__box--filter .list__filter--box .filters-box .quantity_filter > p {
   color: rgb(180, 177, 174);
 }/*# sourceMappingURL=index.css.map */

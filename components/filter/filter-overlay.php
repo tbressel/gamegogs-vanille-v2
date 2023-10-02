@@ -1,5 +1,5 @@
 
-    <div id="overlay-filter" class="overlay__maincontainer">
+    <div id="overlay-filter" class="overlay__maincontainer whiteFF-bg">
         <div class="overlay__box--filter">
             <div class="title__filter">
                 <h2>
@@ -8,78 +8,34 @@
             </div>
 
             <div id="genre_filter" class="list__filter--box genre__filter">
-                <div class="filters-box">
-                    <div class="name_filter">
-                        <p>
-                            FPS
-                        </p>
-                    </div>
-                    <div class="quantity_filter">
-                        <p>
-                            405123
-                        </p>
-                    </div>
-                </div>
-                <div class="filters-box">
-                    <div class="name_filter">
-                        <p>
-                            Action
-                        </p>
-                    </div>
-                    <div class="quantity_filter">
-                        <p>
-                            405123
-                        </p>
-                    </div>
-                </div>
-                <div class="filters-box">
-                    <div class="name_filter">
-                        <p>
-                            Shoot 'em up'
-                        </p>
-                    </div>
-                    <div class="quantity_filter">
-                        <p>
-                            405123
-                        </p>
-                    </div>
-                </div>
-                <div class="filters-box">
-                    <div class="name_filter">
-                        <p>
-                            RPG
-                        </p>
-                    </div>
-                    <div class="quantity_filter">
-                        <p>
-                            405123
-                        </p>
-                    </div>
-                </div>
-                <div class="filters-box">
-                    <div class="name_filter">
-                        <p>
-                            Plateforme
-                        </p>
-                    </div>
-                    <div class="quantity_filter">
-                        <p>
-                            405123
-                        </p>
-                    </div>
-                </div>
-                <div class="filters-box">
-                    <div class="name_filter">
-                        <p>
-                            Course
-                        </p>
-                    </div>
-                    <div class="quantity_filter">
-                        <p>
-                            405123
-                        </p>
-                    </div>
-                </div>
+                
+              
+            </div>
+        </div>
+
+
+        <div class="overlay__box--filter">
+            <div class="title__filter">
+                <h2>
+                    Support
+                </h2>
+            </div>
+
+            <div id="support_filter" class="list__filter--box support__filter">
+                
+              
+            </div>
+        </div>
+        <div class="overlay__box--filter">
+            <div class="title__filter">
+                <h2>
+                    Plateforme
+                </h2>
+            </div>
+
+            <div id="plateform_filter" class="list__filter--box plateform__filter">
+                
+              
             </div>
         </div>
     </div>
@@ -91,8 +47,37 @@
 <template id="genre_filter_template">
     <div class="filters-box">
         <div class="name_filter">
-            <p>
+            <p  class=" bluedark-color">
                 FPS
+            </p>
+        </div>
+        <div class="quantity_filter">
+            <p>
+                405123
+            </p>
+        </div>
+    </div>
+</template>
+
+<template id="support_filter_template">
+    <div class="filters-box">
+        <div class="name_filter">
+            <p  class=" bluedark-color">
+                Disuqtte
+            </p>
+        </div>
+        <div class="quantity_filter">
+            <p>
+                405123
+            </p>
+        </div>
+    </div>
+</template>
+<template id="plateform_filter_template">
+    <div class="filters-box">
+        <div class="name_filter">
+            <p  class=" bluedark-color">
+                Disuqtte
             </p>
         </div>
         <div class="quantity_filter">
