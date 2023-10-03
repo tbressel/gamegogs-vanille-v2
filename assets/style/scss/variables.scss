@@ -1,10 +1,12 @@
+// Fonts variables
+
 @font-face {
     font-family: 'Inter';
     src: url(../../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 
-    
+// text and background color
     $black: #222222 ;
     $white: #EEEEEE ;
     $grey: #cacaca;
@@ -15,7 +17,7 @@
     $orange : #9c5e00;
     $red : #9e0000;
 
-    // button linear gradient color
+// color used for linear gradient buttons
     $golden: #a79300;
     $whiteFF: #FFFFFF;
     $rust: #b87700;

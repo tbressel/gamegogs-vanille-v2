@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GameGogs - La chasse aux trésors</title>
         <meta name="description" content="Base de données pour les collectionneurs de jeux vidéos rétro et nextgen. Gestion de contenu détaillé et marketplace ou bien simple gestionnaire de collection">
+        <meta name=" robots" content=" index, follow">
         
         <link rel="icon" href="./favicon.ico">
         <link rel="stylesheet" href="./assets/style/css/index.css">

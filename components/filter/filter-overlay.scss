@@ -29,7 +29,6 @@
         background-color: $cream-alpha;
         border-radius: 5px;
         box-shadow: $golden -1px 1px 2px 0px;
-        ;
 
         &>h2 {
             font-family: 'Inter';
@@ -78,13 +77,13 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        top:112px;
+        top: 112px;
         left: -2160px;
         width: 80%;
 
         .overlay__box--filter {
-          width: 30%;
-        
+            width: 30%;
+
         }
 
     }

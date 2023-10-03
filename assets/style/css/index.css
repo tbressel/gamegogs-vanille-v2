@@ -330,9 +330,9 @@ h4 {
 }
 .submenu__container .menu__ul {
   position: fixed;
+  z-index: -1;
   top: -50px;
   width: 100%;
-  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,8 +350,8 @@ h4 {
 
 .menu__ul--profil {
   position: fixed;
-  width: 100%;
   z-index: 0;
+  width: 100%;
   top: -200px;
 }
 .menu__ul--profil.active {

@@ -1,17 +1,13 @@
 <section class="lastgames-items__container">
 
-<!-- header -->
-<div class="lastgames-items__maintitle">
+    <!-- header -->
+    <div class="lastgames-items__maintitle">
         <h2>Explorer les ajouts récents</h2>
     </div>
 
-
-
     <div id="list-items" class="lastgames-items__last-items-container"></div>
 
-
-
-<!-- footer -->
+    <!-- footer -->
     <div class="lastgames-items__footer-list">
         <p>
             voir plus d'ajout récents >
@@ -54,16 +50,21 @@
         <div class="lastgames-maxitem__coverimage">
             <img src="./assets/img/covers/no-photo.png" alt="artwork cover">
         </div>
-        <div class="lastgames-maxitem__editor"><p>editeur</p>
+        <div class="lastgames-maxitem__editor">
+            <p>editeur</p>
         </div>
-        <div class="lastgames-maxitem__genre"><p>genre</p>
+        <div class="lastgames-maxitem__genre">
+            <p>genre</p>
         </div>
         <div class="lastgames-maxitem__subcontainer">
-            <div class="lastgames-maxitem__country"><p>Pays</p>
+            <div class="lastgames-maxitem__country">
+                <p>Pays</p>
             </div>
-            <div class="lastgames-maxitem__ref"><p>reference</p>
+            <div class="lastgames-maxitem__ref">
+                <p>reference</p>
             </div>
-            <div class="lastgames-maxitem__support"><p>support</p>
+            <div class="lastgames-maxitem__support">
+                <p>support</p>
             </div>
         </div>
         <div class="lastgames-maxitem__price">' . "111 articles à partir de 15€50" . '</p>
