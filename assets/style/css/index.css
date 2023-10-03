@@ -946,7 +946,7 @@ First Part of CSS collection view 1
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   padding: 20px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1058,6 +1058,10 @@ First Part of CSS collection view 1
   text-align: right;
   font-family: "Inter";
   font-size: 14px;
+}
+.lastgames-items__footer-list p {
+  color: #222222;
+  font-weight: 400;
 }
 
 .display__maxitem {

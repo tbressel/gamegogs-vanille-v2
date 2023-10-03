@@ -1,60 +1,27 @@
+
+// Path to json file 
 const gamesListPath = './bdd/games-list.JSON';
 const usersListPath = './bdd/users-list.JSON';
-let gamesData = [];
-let usersData = [];
-let recentGames = [];
 
+// Fetching datas
+fetchAndDisplayData();
 
-
-// Get JSON in local storage and display them
-fetchAndStoreJson(gamesListPath, 'gamesData')
-    .then(gamesData => {
-        // get users datas
-        return fetchAndStoreJson(usersListPath, 'usersData')
-            .then(usersData => {
-                // if all is OK
-                console.log('Données des jeux :', JSON.parse(localStorage.getItem('gamesData')));
-                console.log('Données des utilisateurs :', JSON.parse(localStorage.getItem('usersData')));
-
-                displayLastGames()
-            });
-    })
-    .catch(error => {
-        console.error('Une erreur s\'est produite :', error);
-    });
-
-
-
-
-// // Obtenez les données d'utilisateurs et de jeux depuis le stockage local
-// 
-// const gamesData = JSON.parse(localStorage.getItem('gamesData'));
-
-// // Obtenez les données JSON d'utilisateurs et de jeux depuis le stockage local
-// const usersListJson = localStorage.getItem('usersData');
-// const gamesListJson = localStorage.getItem('gamesData');
-
-// // Parsez les données JSON en tableaux
-// const usersList = JSON.parse(usersListJson);
-// const gamesList = JSON.parse(gamesListJson);
-
-
-
-
+// Listen to burger button
 document.getElementById('burger-btn').addEventListener('click', (event) => {
     toggleSubMenu(event);
 })
 
+// listen to profil bar button
 document.getElementById('profilarrow-btn-mobile').addEventListener('click', (event) => {
     toggleSubMenu(event);
 })
 
+// listen to 
 document.getElementById('footer-menu').addEventListener('click', (event) => {
     if (event.target.getAttribute("alt") !== "arrow") return
     displayFooterMenu(event);
     reverseFooterArrow(event);
 })
-
 
 document.getElementById('collection').addEventListener('click', async () => {
     // close submenu

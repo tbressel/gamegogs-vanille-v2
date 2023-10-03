@@ -1,19 +1,31 @@
 // Loading JSON's datas and send them to the local storage
-function fetchAndStoreJson(path, storeId) {
-    return fetch(path)
-        .then(response => response.json())
-        .then(data => {
-            const jsonString = JSON.stringify(data);
-            localStorage.setItem(storeId, jsonString);
-            console.log(`Les données ont été stockées dans ${storeId} avec succès.`);
-            return data;
-        })
-        .catch(error => {
-            console.error(`Erreur lors de la récupération des données depuis ${path}:`, error);
-            throw error;
-        });
+async function fetchAndStoreJson(path, storeId) {
+    try {
+        const response = await fetch(path);
+        const data = await response.json();
+        const jsonString = JSON.stringify(data);
+        localStorage.setItem(storeId, jsonString);
+        console.log(storeId);
+        return data;
+    } catch (error) {
+        console.error('Erreur', error);
+    }
 }
-
+// Get JSON in local storage and display them
+async function fetchAndDisplayData() {
+    try {
+        const gamesData = await fetchAndStoreJson(gamesListPath, 'gamesData');
+        const usersData = await fetchAndStoreJson(usersListPath, 'usersData');
+        
+        // if all is OK
+        console.log(JSON.parse(localStorage.getItem('gamesData')));
+        console.log(JSON.parse(localStorage.getItem('usersData')));
+        
+        displayLastGames();
+    } catch (error) {
+        console.error('Il y\'a une erreur', error);
+    }
+}
 
 function displayLastGames() {
 
@@ -62,10 +74,6 @@ function displayLastGames() {
     });
 }
 
-
-
-
-
 function toggleSubMenu(event) {
     document.querySelector(`.submenu__container .${event.target.getAttribute('data-set')}`).classList.toggle('active');
     reverseProfilArrow();
@@ -83,12 +91,9 @@ function displayFooterMenu(event) {
     document.getElementById(event.target.getAttribute("data-set")).classList.toggle('active');
 }
 
-
 function reverseFooterArrow(event) {
     event.target.classList.toggle('down');
 }
-
-
 
 // fetching a main page and waiting for the response to send it to the destination node
 async function insertPageContent(fileName, path, id) {
@@ -117,7 +122,6 @@ function setFilterBar() {
 
 }
 
-
 function findUserGameByUserId(id) {
     // find user in user list
     const usersData = JSON.parse(localStorage.getItem('usersData'));
@@ -131,7 +135,6 @@ function findUserGameByUserId(id) {
         return userGames
     }
 }
-
 
 function displayMyItemsView1(templateId, userGames) {
     // get the template
@@ -157,7 +160,6 @@ function displayMyItemsView1(templateId, userGames) {
     });
 }
 
-
 function displayMyItemsView2(templateId, userGames) {
     // get the template
     const listItemsTemplate = document.getElementById(templateId);
@@ -166,10 +168,10 @@ function displayMyItemsView2(templateId, userGames) {
     const myitemsContainer = document.getElementById('list-items');
 
     userGames.forEach(game => {
-        // Clonez le contenu du modèle
+        // clone the template
         const templateContent = document.importNode(listItemsTemplate.content, true);
 
-        // Mettre à jour les éléments HTML du modèle avec les données du jeu
+        // construct elements of the clone template
         templateContent.querySelector('.collection-item__maincontainer').setAttribute('id', `${game.id_videogame}`);
         templateContent.querySelector('.collection-items__coverimage img').setAttribute("src", `./assets/${game.coverpic_videogame}`);
         templateContent.querySelector('.collection-items__title h3').textContent = game.title_videogame;
@@ -178,11 +180,10 @@ function displayMyItemsView2(templateId, userGames) {
         templateContent.querySelector('.collection-items__year p').textContent = game.year_videogame;
         templateContent.querySelector('.collection-items__editor p').textContent = game.editor_videogame;
 
-        // Ajouter le contenu au conteneur
+        // send template into DOM
         myitemsContainer.appendChild(templateContent);
     });
 }
-
 
 function displayMyItemsView3(templateId, userGames) {
 
@@ -193,10 +194,10 @@ function displayMyItemsView3(templateId, userGames) {
     const myitemsContainer = document.getElementById('list-items');
 
     userGames.forEach(game => {
-        // Clonez le contenu du modèle
+        // Cone the template
         const templateContent = document.importNode(listItemsTemplate.content, true);
 
-        // Mettre à jour les éléments HTML du modèle avec les données du jeu
+        // loading datas into clone
         templateContent.querySelector('.collection-item__maincontainer').setAttribute('id', `${game.id_videogame}`);
         //  templateContent.querySelector('.collection-items__coverimage img').setAttribute("src", `./assets/${game.coverpic_videogame}`);
         templateContent.querySelector('.collection-items__title h3').textContent = game.title_videogame;
@@ -204,19 +205,15 @@ function displayMyItemsView3(templateId, userGames) {
         templateContent.querySelector('.collection-items__year p').textContent = game.year_videogame;
         templateContent.querySelector('.collection-items__editor p').textContent = game.editor_videogame;
 
-        // Ajouter le contenu au conteneur
+        // Send data to dOM
         myitemsContainer.appendChild(templateContent);
     });
 }
-
-
-
 
 function eraseTextareaContent(target) {
     target.parentElement.firstElementChild.firstElementChild.value = "";
     console.log('contenu de <textarea> est effacé')
 }
-
 
 function closeNotesContainer(element) {
     // Close the notes container if main section of the item is closed
@@ -226,10 +223,6 @@ function closeNotesContainer(element) {
         element.nextElementSibling.classList.add('hidden');
     }
 }
-
-
-
-
 
 function displayGenre() {
 
@@ -278,24 +271,18 @@ function displayGenre() {
     });
 
 
-    // Récupérez l'élément HTML avec l'id "genre_filter"
+    // get html element with id "genre_filter"
     const genreFilterElement = document.getElementById('genre_filter');
 
-    // Récupérez le template genre_filter_template
+    // get the  template genre_filter_template
     const genreFilterTemplate = document.getElementById('genre_filter_template');
 
-    // Parcourez chaque genre dans le tableau genreCount
+    // Ploop the array genreCount
     for (const genre in genreCount) {
-        // Clonez le contenu du modèle
+        // clone hte template
         const genreFilterItem = document.importNode(genreFilterTemplate.content, true);
-
-        // Mettez à jour l'élément de nom du genre avec le nom du genre
         genreFilterItem.querySelector('.name_filter p').textContent = genre;
-
-        // Mettez à jour l'élément de quantité avec le nombre total de jeux pour ce genre
         genreFilterItem.querySelector('.quantity_filter p').textContent = genreCount[genre] + ' / ' + (totalGamesByGenre[genre] || 0);
-
-        // Ajoutez l'élément cloné à l'élément genre_filter dans le document
         genreFilterElement.appendChild(genreFilterItem);
     }
 
@@ -348,24 +335,18 @@ function displaySupport() {
     });
 
 
-    // Récupérez l'élément HTML avec l'id "support_filter"
+    // get the element id "support_filter"
     const supportFilterElement = document.getElementById('support_filter');
 
-    // Récupérez le template support_filter_template
+    // get the templayte support_filter_template
     const supportFilterTemplate = document.getElementById('support_filter_template');
 
-    // Parcourez chaque support dans le tableau supportCount
+    // lopp the array supportCount
     for (const support in supportCount) {
-        // Clonez le contenu du modèle
+        // clone the template
         const supportFilterItem = document.importNode(supportFilterTemplate.content, true);
-
-        // Mettez à jour l'élément de nom du support avec le nom du support
         supportFilterItem.querySelector('.name_filter p').textContent = support;
-
-        // Mettez à jour l'élément de quantité avec le nombre total de jeux pour ce support
         supportFilterItem.querySelector('.quantity_filter p').textContent = supportCount[support] + ' / ' + (totalGamesBySupport[support] || 0);
-
-        // Ajoutez l'élément cloné à l'élément support_filter dans le document
         supportFilterElement.appendChild(supportFilterItem);
     }
 
@@ -376,24 +357,24 @@ function displayPlateform() {
     const usersList = JSON.parse(localStorage.getItem('usersData'));
 
 
-    // Identifiez l'utilisateur spécifique
+    // get the user by ID
     const userId = 1;
     const userArray = usersList.find((user) => user.id_user === userId);
 
-    // Obtenez les ID des jeux de cet utilisateur
+    // get the games 
     const userGameIds = userArray.games_user;
 
-    // Créez un objet pour stocker les totaux des plateformes et les totaux de jeux par plateforme
+    // create objet to get plateform counter and total game by plateform
     const plateformCount = {};
     const totalGamesByPlateform = {};
 
-    // Loop sur les jeux de l'utilisateur
+    // Loop with games's user array
     userGameIds.forEach((gameId) => {
-        // Trouvez le jeu dans la liste de jeux en utilisant l'ID du jeu
+        // with the game ID find the game
         const game = gamesList.find((game) => game.id_videogame === gameId);
         if (game) {
             const plateform = game.plateform_videogame[0];
-            // Mettez à jour le compteur de plateforme de l'utilisateur
+            // update user plateform counter 
             if (plateform in plateformCount) {
                 plateformCount[plateform]++;
             } else {
@@ -402,7 +383,7 @@ function displayPlateform() {
         }
     });
 
-    // Loop sur la liste complète des jeux pour obtenir le nombre total de jeux par plateforme
+    // Loop on the whole array af games and get plateforme plateforme
     gamesList.forEach((game) => {
         const plateform = game.plateform_videogame[0];
         if (plateform in totalGamesByPlateform) {
@@ -412,25 +393,19 @@ function displayPlateform() {
         }
     });
 
-    // Récupérez l'élément HTML avec l'id "plateform_filter"
+    // het html element with id "plateform_filter"
     const plateformFilterElement = document.getElementById('plateform_filter');
 
-    // Récupérez le template plateform_filter_template
+    // get the template plateform_filter_template
     const plateformFilterTemplate = document.getElementById('plateform_filter_template');
 
-    // Parcourez chaque plateforme dans le tableau plateformCount
+    // loop on each plateforme plateformCount
     for (const plateform in plateformCount) {
-        // Clonez le contenu du modèle
+        // clone the template
         const plateformFilterItem = document.importNode(plateformFilterTemplate.content, true);
-
-        // Mettez à jour l'élément de nom du plateform avec le nom du plateform
         plateformFilterItem.querySelector('.name_filter p').textContent = plateform;
-
-        // Mettez à jour l'élément de quantité avec le nombre total de jeux pour cette plateforme
         plateformFilterItem.querySelector('.quantity_filter p').textContent =
             plateformCount[plateform] + ' / ' + (totalGamesByPlateform[plateform] || 0);
-
-        // Ajoutez l'élément cloné à l'élément plateform_filter dans le document
         plateformFilterElement.appendChild(plateformFilterItem);
     }
 }
