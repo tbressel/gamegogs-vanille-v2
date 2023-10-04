@@ -1,17 +1,16 @@
 .overlay__maincontainer {
-    position: fixed;
+    position: absolute;
     z-index: 3;
 
-    width: 340px;
+    display: flex;
+    flex-direction: column;
+    width: 99%;
     height: fit-content;
-    top: 170px;
-    left: -380px;
-    overflow-y: auto;
-
-    border: 2px solid $black;
-    border-radius: 0 10px;
+    top: -14px;
+    left: -1000px;
+   
+    border: 1px solid $black;
     margin: 2px 0;
-    padding: 10px;
 
     transition: 300ms ease-in-out;
 
@@ -23,24 +22,26 @@
 
 .overlay__box--filter {
     margin-bottom: 40px;
+    padding: 10px;
 
     .title__filter {
         margin-bottom: 5px;
-        background-color: $cream-alpha;
+        background-color: $black;
         border-radius: 5px;
-        box-shadow: $golden -1px 1px 2px 0px;
+        padding: 4px;
 
         &>h2 {
             font-family: 'Inter';
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 600;
             line-height: 27px;
+            color: $golden;
+            
         }
     }
 
 
     .list__filter--box {
-
 
 
         .filters-box {
@@ -49,20 +50,19 @@
             justify-content: space-between;
             align-items: center;
 
-
-
             .name_filter {
                 &>p {
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 27px;
+                    color: $black;
                 }
             }
 
             .quantity_filter {
 
                 &>p {
-
+                    font-size: 12px;
                     color: $black;
                 }
             }
@@ -76,10 +76,11 @@
 
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
         flex-wrap: wrap;
-        top: 112px;
+        top: -78px;
         left: -2160px;
-        width: 80%;
+        
 
         .overlay__box--filter {
             width: 30%;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -80,14 +81,12 @@ input {
   height: 30px;
   background-color: #EEEEEE;
   border-radius: 5px;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   margin-bottom: 10px;
 }
 input:focus-visible {
   height: 35px;
   font-size: 1.2rem;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   border-color: #FBF4A1;
 }
@@ -134,6 +133,11 @@ h4 {
   z-index: -3;
 }
 
+.underline {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1280px) {
   .header__container--burger,
   .profilarrow,
@@ -143,52 +147,28 @@ h4 {
 }
 .header__container {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 .header__container .header__container--top,
 .header__container .header__container--bot {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .header__container .header__container--top .header__container--brandname,
 .header__container .header__container--bot .header__container--brandname {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .header__container .header__container--top .header__container--brandname .brandname__top,
 .header__container .header__container--top .header__container--brandname .brandname__bot,
 .header__container .header__container--bot .header__container--brandname .brandname__top,
 .header__container .header__container--bot .header__container--brandname .brandname__bot {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 .header__container .header__container--top .header__container--brandname .brandname__top .brandname__top--joystick,
 .header__container .header__container--top .header__container--brandname .brandname__top .brandname__top--title,
@@ -212,29 +192,20 @@ h4 {
 }
 .header__container .header__container--top .header__container--burger,
 .header__container .header__container--bot .header__container--burger {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   margin: 10px;
   margin-right: 12px;
 }
 .header__container .header__container--searchfield {
   width: 300px;
-  -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
 }
 .header__container .header__container--searchfield .field-search {
   width: -webkit-fill-available;
   height: 30px;
   border-radius: 5px;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 .header__container .header__container--zoom {
@@ -251,12 +222,8 @@ h4 {
 
 @media screen and (min-width: 744px) {
   .header__container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .header__container .header__container--top .header__container--burger {
     display: none;
@@ -272,7 +239,6 @@ h4 {
     width: 270px;
     margin-top: auto;
     margin-bottom: auto;
-    -webkit-transition: 100ms ease-in-out;
     transition: 100ms ease-in-out;
   }
   .header__container .header__container--searchfield .field-search:focus-visible {
@@ -283,28 +249,14 @@ h4 {
     margin-bottom: auto;
   }
   .header__container .header__container--menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
   .header__container .header__container--menu .menu__ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
   .header__container .header__container--menu .menu__ul .menu__icon img {
     width: 30px;
@@ -315,12 +267,10 @@ h4 {
 @media screen and (min-width: 1280px) {
   .header__container--searchfield {
     width: 670px !important;
-    -webkit-transition: 100ms ease-in-out;
     transition: 100ms ease-in-out;
   }
 }
 .profilarrow .down {
-  -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
   rotate: 180deg;
 }
@@ -333,16 +283,9 @@ h4 {
   z-index: -1;
   top: -50px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .submenu__container .menu__ul.active {
   top: 98px;
@@ -368,15 +311,9 @@ h4 {
 
 @media screen and (min-width: 744px) {
   .menu__ul--profil {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .menu__ul--profil.active {
     top: 55px;
@@ -387,80 +324,45 @@ h4 {
   }
 }
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-top: 20px;
 }
 
 @media screen and (min-width: 1280px) {
   .footer__container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .footer__container--gamegogsmenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 40px;
 }
 .footer__container--gamegogsmenu .gamegogs__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 .footer__container--gamegogsmenu .gamegogsmenu__about,
 .footer__container--gamegogsmenu .gamegogsmenu__help,
 .footer__container--gamegogsmenu .gamegogsmenu__join {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 .footer__container--gamegogsmenu .gamegogsmenu__about.active,
 .footer__container--gamegogsmenu .gamegogsmenu__help.active,
 .footer__container--gamegogsmenu .gamegogsmenu__join.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .footer__container--gamegogsmenu .gamegogs__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
 }
 .footer__container--gamegogsmenu .gamegogs__title img {
@@ -473,7 +375,6 @@ h4 {
 }
 .footer__container--gamegogsmenu .gamegogs__title .down {
   rotate: 180deg;
-  -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
 }
 .footer__container--gamegogsmenu .gamegogsmenu__li {
@@ -487,34 +388,22 @@ h4 {
 
 @media screen and (min-width: 744px) {
   .footer__container--gamegogsmenu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
   }
   .footer__container--gamegogsmenu .gamegogsmenu__about,
   .footer__container--gamegogsmenu .gamegogsmenu__help,
   .footer__container--gamegogsmenu .gamegogsmenu__join {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
     margin-left: 15px;
   }
   .footer__container--gamegogsmenu .gamegogsmenu__li {
     border-bottom: 0px;
   }
   .footer__container--gamegogsmenu .gamegogs__title {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .footer__container--gamegogsmenu .gamegogs__title img {
     display: none;
@@ -529,32 +418,19 @@ h4 {
   }
 }
 .socialnetworks__container {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
+  order: 0;
 }
 .socialnetworks__container .socialnetwork__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .socialnetworks__container .socialnetwork__block .socialnetwork__title {
   display: none;
 }
 .socialnetworks__container .socialnetwork__block .socialnetworkmenu__follow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 0 0 20px 0;
 }
 .socialnetworks__container .socialnetwork__block .socialnetworkmenu__text {
@@ -567,9 +443,7 @@ h4 {
 
 @media screen and (min-width: 744px) {
   .socialnetworks__container {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   .socialnetworks__container .socialnetworkmenu__text {
     display: inline-block !important;
@@ -585,32 +459,18 @@ h4 {
     margin-left: 50px;
   }
   .socialnetwork__title {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     margin: 10px;
   }
   .socialnetwork__title > p {
     font-weight: 400;
   }
   .socialnetworkmenu__follow {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column !important;
+    align-items: flex-start;
     margin: 10px;
   }
   .socialnetworkmenu__li {
@@ -618,27 +478,16 @@ h4 {
   }
 }
 .rgpd__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  order: 4;
 }
 .rgpd__container .rgpd__block {
   width: 100%;
 }
 .rgpd__container .rgpd__block .rgpdmenu__rgpd {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
 }
 .rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li {
@@ -661,38 +510,21 @@ h4 {
     width: 100%;
   }
   .rgpd__container .rgpd__block .rgpdmenu__rgpd {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
   .rgpd__container .rgpd__block .rgpdmenu__rgpd .rgpdmenu__li {
     margin-bottom: 20px;
   }
 }
 .footer__container--brandname {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  order: 3;
 }
 .footer__container--brandname .brandname__copyright p {
   font-size: 12px;
@@ -715,32 +547,18 @@ h4 {
   top: 0px;
   width: 100%;
   z-index: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   padding: 10px;
 }
 .filter__navigation.show {
   top: 110px;
 }
 .filter__navigation .filter__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   border: 1px solid #FBF4A1;
   border-radius: 5px;
 }
@@ -759,15 +577,9 @@ h4 {
   margin: 4px;
 }
 .filter__navigation .views__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   width: 140px;
   margin-left: 80px;
 }
@@ -790,17 +602,10 @@ h4 {
   }
 }
 .lastarticles__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .lastarticles__container .article__container {
   height: 245px;
@@ -810,19 +615,14 @@ h4 {
 .lastarticles__container .article__container .image__article {
   border-radius: 10px;
   overflow: hidden;
-  -webkit-box-shadow: 2px 2px 10px 0px;
-          box-shadow: 2px 2px 10px 0px;
+  box-shadow: 2px 2px 10px 0px;
 }
 .lastarticles__container .article__container .title__container {
   text-align: center;
 }
 .lastarticles__container .article__container .title__container .title__article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   top: -70px;
   height: 70px;
@@ -830,7 +630,6 @@ h4 {
   max-width: 180px;
   max-height: 70px;
   border-radius: 0 0 10px 10px;
-  background: -webkit-gradient(linear, left top, right top, from(#a79300), color-stop(#FFFFFF), to(#b87700));
   background: linear-gradient(90deg, #a79300, #FFFFFF, #b87700);
 }
 .lastarticles__container .article__container .title__container .title__article > p {
@@ -857,24 +656,16 @@ h4 {
   }
 }
 .newsletter__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 100px;
   padding: 12px;
   width: 92%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 10px 0px;
-          box-shadow: 2px 2px 10px 0px;
+  box-shadow: 2px 2px 10px 0px;
 }
 .newsletter__container .newsletter__text {
   text-align: center;
@@ -887,30 +678,16 @@ h4 {
   color: #EEEEEE;
 }
 .newsletter__container .newsletter__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 15px;
 }
 .newsletter__container .newsletter__subcontainer > label {
   color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .newsletter__container .newsletter__subcontainer > input {
   margin: 15px auto 15px auto;
@@ -918,7 +695,6 @@ h4 {
 }
 .newsletter__container .newsletter__subcontainer > .btn {
   border: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
@@ -927,23 +703,16 @@ h4 {
   font-size: 16px;
   border-radius: 10px;
   padding: 10px;
-  background: -webkit-gradient(linear, left top, right top, from(#a79300), color-stop(#FFFFFF), to(#b87700));
   background: linear-gradient(90deg, #a79300, #FFFFFF, #b87700);
 }
 
 .lastgames-items__container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   border-radius: 20px;
   margin-bottom: 30px;
   padding: 20px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: var(--clr__whiteFF-alpha);
@@ -956,30 +725,16 @@ h4 {
 }
 
 .lastgames-items__last-items-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
 }
 .lastgames-items__last-items-container .lastgames-items__last-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 20px;
   padding: 10px;
   width: 145px;
@@ -990,17 +745,12 @@ h4 {
   width: 140px;
   height: 140px;
   text-align: center;
-  -webkit-box-shadow: 2px 2px 10px 0px;
-          box-shadow: 2px 2px 10px 0px;
-  -webkit-transition: 500ms ease-in-out;
+  box-shadow: 2px 2px 10px 0px;
   transition: 500ms ease-in-out;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 .lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__coverimage:hover {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 500ms ease-in-out;
+  transform: rotate(0deg);
   transition: 500ms ease-in-out;
   cursor: pointer;
 }
@@ -1080,21 +830,13 @@ h4 {
   margin-top: 5px;
 }
 .hidden__field .lastgames-maxitem__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   margin-top: 5px;
 }
 .hidden__field .lastgames-maxitem__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
   max-width: 80%;
   min-width: 80%;
 }
@@ -1134,115 +876,90 @@ h4 {
   color: var(--clr__grey6D);
 }
 
-/*
-------------------------------------
-First Part of CSS collection view 1
-------------------------------------
-*/
-.view1-items__container {
+.myitems-items__container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   border-radius: 20px;
   margin-bottom: 100px;
   padding: 20px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: var(--clr__whiteFF-alpha);
 }
-.view1-items__container .view1-items__maintitle {
+.myitems-items__container .myitems-items__maintitle {
+  text-align: center;
+  margin: 20px;
+  font-size: 24px;
+  font-family: "PTSans-Bold";
+}
+.myitems-items__container .myitems-items__last-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.myitems-items__container .myitems-items__last-items-container p {
+  color: #222222;
+  font-weight: 400;
+}
+
+/*
+----------------
+ollection view 1
+----------------
+*/
+.view1-items__maincontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--clr__whiteFF-alpha);
+}
+.view1-items__maincontainer .view1-items__maintitle {
   text-align: center;
   margin: 20px;
   font-size: 24px;
   font-family: "Inter";
 }
-
-.view1-items__last-items-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-}
-
-.view1-items__last-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 140px;
-}
-
-.view1-items__coverimage {
+.view1-items__maincontainer .view1-items__coverimage {
   overflow: hidden;
   border-radius: 5px;
   width: 140px;
   height: 140px;
   text-align: center;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-  -webkit-transition: 500ms ease-in-out;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
   transition: 500ms ease-in-out;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
+  transform: rotate(0deg);
 }
-
-.view1-items__coverimage:hover {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  cursor: pointer;
-}
-
-.view1-items__coverimage img {
+.view1-items__maincontainer .view1-items__coverimage > img {
   width: 150px;
   height: auto;
   min-height: 150px;
 }
-
-.selected__item {
-  border: red 4px solid;
+.view1-items__maincontainer .view1-items__coverimage > :hover {
+  cursor: pointer;
+  transform: rotate(2deg);
+  transition: 500ms ease-in-out;
 }
-
-.view1-items__title {
+.view1-items__maincontainer .view1-items__title {
   text-align: left;
 }
-
-.view1-items__subtitle,
-.collection-items__subtitle {
+.view1-items__maincontainer .view1-items__subtitle {
   text-align: left;
   font-family: "Inter";
   font-size: 14px;
 }
-
-.view1-items__plateform {
+.view1-items__maincontainer .view1-items__plateform {
   text-align: left;
   font-family: "Inter";
   font-size: 14px;
 }
-.view1-items__plateform > img {
+.view1-items__maincontainer .view1-items__plateform > img {
   position: relative;
   height: 21px;
   top: -180px;
@@ -1253,6 +970,15 @@ First Part of CSS collection view 1
   background-color: #EEEEEE;
 }
 
+.view1-items__last-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 140px;
+}
+
 .view1-items__footer-list {
   text-align: right;
   font-family: "Inter";
@@ -1260,31 +986,15 @@ First Part of CSS collection view 1
 }
 
 .display__maxitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: var(--clr__whiteFF);
   width: 0vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
   line-height: 15px;
-  -webkit-animation: maxify 10ms forwards;
-          animation: maxify 10ms forwards;
-}
-
-@-webkit-keyframes maxify {
-  0% {
-    width: 0vw;
-  }
-  100% {
-    width: 100vw;
-  }
+  animation: maxify 10ms forwards;
 }
 
 @keyframes maxify {
@@ -1328,22 +1038,13 @@ First Part of CSS collection view 1
 }
 
 .view1-maxitem__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   margin-top: 5px;
 }
-
-.view1-maxitem__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
+.view1-maxitem__coverimage > img {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
   max-width: 80%;
   min-width: 80%;
 }
@@ -1368,16 +1069,13 @@ First Part of CSS collection view 1
   font-family: "Inter";
   font-size: 12px;
 }
-
-.view1-maxitem__country {
+.view1-maxitem__subcontainer .view1-maxitem__country {
   color: var(--clr__grey6D);
 }
-
-.view1-maxitem__ref {
+.view1-maxitem__subcontainer .view1-maxitem__ref {
   color: var(--clr__grey6D);
 }
-
-.view1-maxitem__support {
+.view1-maxitem__subcontainer .view1-maxitem__support {
   color: var(--clr__grey6D);
 }
 
@@ -1390,945 +1088,121 @@ First Part of CSS collection view 1
   color: var(--clr__grey6D);
 }
 
-.note-informations.hidden,
-.bot-informations.hidden {
-  display: none;
-}
-
-.bit-items__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: columns;
-          flex-direction: columns;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.note-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.input-notes {
-  /* width: 150%;
-  height: 120px; */
-  border-radius: 5px;
-  border: solid 1px black;
-  /* background-color: aliceblue; */
-  padding: 5px;
-}
-
-.arrow img {
-  width: 35px;
-  height: 25px;
-}
-
-.collection-items__coverimage:hover {
-  cursor: pointer;
-}
-
-.collection-items__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px var(--clr__grey6D);
-          box-shadow: 5px 5px 5px var(--clr__grey6D);
-  width: 100px;
-  height: auto;
-  min-height: 80px;
-}
-
-.collection-items__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  text-align: center;
-}
-
 /*
-------------------------------------
-First Part of CSS collection view 1
-------------------------------------
+-----------------
+collection view 2
+-----------------
 */
-.myitems-items__last-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 140px;
-}
-
-.myitems-items__coverimage {
-  overflow: hidden;
-  border-radius: 5px;
-  width: 140px;
-  height: 140px;
-  text-align: center;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
-}
-
-.myitems-items__coverimage:hover {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  cursor: pointer;
-}
-
-.myitems-items__coverimage img {
-  width: 150px;
-  height: auto;
-  min-height: 150px;
-}
-
-.selected__item {
-  border: red 4px solid;
-}
-
-.myitems-items__subtitle,
-.collection-items__subtitle {
-  text-align: left;
-  font-family: "PTSans-Regular";
-  font-size: 14px;
-}
-
-.myitems-items__plateform,
-.myitems-items__plateform {
-  text-align: right;
-  font-family: "PTSans-Italic";
-  font-size: 14px;
-}
-
-.myitems-items__footer-list {
-  text-align: right;
-  font-family: "PTSans-Italic";
-  font-size: 14px;
-}
-
-.display__maxitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: var(--clr__whiteFF);
-  width: 0vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 10px;
-  line-height: 15px;
-  -webkit-animation: maxify 10ms forwards;
-          animation: maxify 10ms forwards;
-}
-
-@keyframes maxify {
-  0% {
-    width: 0vw;
-  }
-  100% {
-    width: 100vw;
-  }
-}
-.myitems-maxitem__title {
-  text-align: left;
-  margin-top: 10px;
-  margin-left: 10%;
-  font-family: "PTSans-BoldItalic";
-  font-size: 24px;
-}
-
-.myitems-maxitem__subtitle {
-  text-align: left;
-  margin-top: 10px;
-  margin-left: 10%;
-  font-family: "PTSans-Bold";
-  font-size: 20px;
-}
-
-.myitems-maxitem__plateform {
-  text-align: left;
-  margin-left: 10%;
-  font-family: "PTSans-Bold";
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.myitems-maxitem__year {
-  text-align: left;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.myitems-maxitem__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 5px;
-}
-
-.myitems-maxitem__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-  max-width: 80%;
-  min-width: 80%;
-}
-
-.myitems-maxitem__editor {
-  margin-top: 5px;
-  margin-left: 10%;
-  font-family: "PTSans-Bold";
-  font-size: 16px;
-}
-
-.myitems-maxitem__genre {
-  margin-top: 30px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 14px;
-}
-
-.myitems-maxitem__subcontainer {
-  margin-top: 5px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 12px;
-}
-
-.myitems-maxitem__country {
-  color: var(--clr__grey6D);
-}
-
-.myitems-maxitem__ref {
-  color: var(--clr__grey6D);
-}
-
-.myitems-maxitem__support {
-  color: var(--clr__grey6D);
-}
-
-.myitems-maxitem__price {
-  margin-top: 15px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 13px;
-  line-height: 9.5px;
-  color: var(--clr__grey6D);
-}
-
-.note-informations.hidden,
-.bot-informations.hidden {
-  display: none;
-}
-
-.bit-items__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: columns;
-          flex-direction: columns;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.note-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.input-notes {
-  border-radius: 5px;
-  border: solid 1px black;
-  padding: 5px;
-  width: 95%;
-}
-
-.arrow img {
-  width: 35px;
-  height: 25px;
-}
-
-.collection-items__coverimage:hover {
-  cursor: pointer;
-}
-
-.collection-items__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px var(--clr__grey6D);
-          box-shadow: 5px 5px 5px var(--clr__grey6D);
-  width: 100px;
-  height: auto;
-  min-height: 80px;
-}
-
-.collection-items__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  text-align: center;
-}
-
-/*
------------------------------------
-First Part of CSS collection view 2
------------------------------------
-*/
-.collection-view-2 {
-  position: relative;
-  margin-top: 45px;
-}
-
-.myitems-maxitem__price {
-  margin-top: 15px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 13px;
-  line-height: 9.5px;
-  color: var(--clr__grey6D);
-}
-
-.collection-arrow {
-  position: absolute;
-  right: 40px;
-}
-
-.bot-items__subcontainer {
-  margin-left: 85px;
-}
-
-.bot-items__prices h4 {
-  padding: 5px;
-}
-
-.bot-items__prices h4 span {
-  float: right;
-}
-
-.bot-items__date-state {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.bot-items__date-state p {
-  margin: 5px;
-  font-size: 12px;
-  font-family: "PTSans-Italic";
-}
-
-.bot-items__date-state h5 {
-  margin: 5px;
-  font-size: 12px;
-  font-family: "PTSans-Bold";
-}
-
-.bot-items__notes {
-  margin: 5px;
-}
-
-.bot-items__notes,
-.edit-notes:hover {
-  cursor: pointer;
-}
-
-.form-notes {
-  text-align: center;
-}
-
-/*
-------------------------------------
-First Part of CSS collection view 1
-------------------------------------
-*/
-.myitems-items__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 20px;
-  margin-bottom: 100px;
-  padding: 20px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: var(--clr__whiteFF-alpha);
-}
-.myitems-items__container .myitems-items__maintitle {
-  text-align: center;
-  margin: 20px;
-  font-size: 24px;
-  font-family: "PTSans-Bold";
-}
-.myitems-items__container .myitems-items__last-items-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-}
-.myitems-items__container .myitems-items__last-items-container p {
-  color: #222222;
-  font-weight: 400;
-}
-
-.myitems-items__last-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 140px;
-}
-
-.myitems-items__coverimage {
-  overflow: hidden;
-  border-radius: 5px;
-  width: 140px;
-  height: 140px;
-  text-align: center;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
-}
-
-.myitems-items__coverimage:hover {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
-  cursor: pointer;
-}
-
-.myitems-items__coverimage img {
-  width: 150px;
-  height: auto;
-  min-height: 150px;
-}
-
-.selected__item {
-  border: red 4px solid;
-}
-
-.view2-items__subtitle,
-.view3-items__subtitle {
-  text-align: left;
-  font-family: "PTSans-Regular";
-  font-size: 14px;
-}
-
-.myitems-items__plateform {
-  text-align: right;
-  font-family: "PTSans-Italic";
-  font-size: 14px;
-}
-
-.myitems-items__footer-list {
-  text-align: right;
-  font-family: "PTSans-Italic";
-  font-size: 14px;
-}
-
-.display__maxitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: var(--clr__whiteFF);
-  width: 0vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 10px;
-  line-height: 15px;
-  -webkit-animation: maxify 10ms forwards;
-          animation: maxify 10ms forwards;
-}
-
-@keyframes maxify {
-  0% {
-    width: 0vw;
-  }
-  100% {
-    width: 100vw;
-  }
-}
-.myitems-maxitem__title {
-  text-align: left;
-  margin-top: 10px;
-  margin-left: 10%;
-  font-family: "PTSans-BoldItalic";
-  font-size: 24px;
-}
-
-.myitems-maxitem__subtitle {
-  text-align: left;
-  margin-top: 10px;
-  margin-left: 10%;
-  font-family: "PTSans-Bold";
-  font-size: 20px;
-}
-
-.myitems-maxitem__plateform {
-  text-align: left;
-  margin-left: 10%;
-  font-family: "PTSans-Bold";
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.myitems-maxitem__year {
-  text-align: left;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.myitems-maxitem__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 5px;
-}
-
-.myitems-maxitem__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
-  max-width: 80%;
-  min-width: 80%;
-}
-
-.myitems-maxitem__editor {
-  margin-top: 5px;
-  margin-left: 10%;
-  font-family: "PTSans-Bold";
-  font-size: 16px;
-}
-
-.myitems-maxitem__genre {
-  margin-top: 30px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 14px;
-}
-
-.myitems-maxitem__subcontainer {
-  margin-top: 5px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 12px;
-}
-
-.myitems-maxitem__country {
-  color: var(--clr__grey6D);
-}
-
-.myitems-maxitem__ref {
-  color: var(--clr__grey6D);
-}
-
-.myitems-maxitem__support {
-  color: var(--clr__grey6D);
-}
-
-.myitems-maxitem__price {
-  margin-top: 15px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 13px;
-  line-height: 9.5px;
-  color: var(--clr__grey6D);
-}
-
-.note-informations.hidden,
-.bot-informations.hidden {
-  display: none;
-}
-
-.bit-items__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: columns;
-          flex-direction: columns;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.note-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.input-notes {
-  border-radius: 5px;
-  border: solid 1px black;
-  padding: 5px;
-  width: 95%;
-}
-
-.top-informations,
-.bot-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: aliceblue;
-}
-
-.bot-informations {
-  padding: 0px;
-}
-
-.arrow img {
-  width: 35px;
-  height: 25px;
-}
-
-.collection-items__coverimage:hover,
-.view2-items__coverimage:hover,
-.view3-items__coverimage:hover {
-  cursor: pointer;
-}
-
-.collection-items__coverimage > img,
-.view2-items__coverimage > img,
-.view3-items__coverimage > img {
-  -webkit-box-shadow: 5px 5px 5px var(--clr__grey6D);
-          box-shadow: 5px 5px 5px var(--clr__grey6D);
-  width: 140px;
-  height: auto;
-  min-height: 140px;
-}
-
-.collection-items__coverimage,
-.view2-items__coverimage,
-.view3-items__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  width: 140px;
-  height: 140px;
-  text-align: center;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-  padding: 2px;
-  margin-right: 5%;
-  font-size: 12px;
-  font-family: "PTSans-Italic";
-}
-
-.view2-items__subtitle,
-.view2-items__editor,
-.view2-items__year,
-.view2-items__plateform {
-  padding: 2px;
-  margin-right: 5%;
-  font-size: 12px;
-  font-family: "PTSans-Italic";
-}
-
-.view3-items__subtitle,
-.view3-items__editor,
-.view3-items__year,
-.view3-items__plateform {
-  padding: 2px;
-  margin-right: 5%;
-  font-size: 12px;
-  font-family: "PTSans-Italic";
-}
-
-/*
------------------------------------
-First Part of CSS collection view 2
------------------------------------
-*/
-.collection-view-2,
-.collection-view-3 {
-  position: relative;
-  margin-top: 45px;
-}
-
-.myitems-maxitem__price {
-  margin-top: 15px;
-  margin-left: 10%;
-  font-family: "PTSans-Regular";
-  font-size: 13px;
-  line-height: 9.5px;
-  color: var(--clr__grey6D);
-}
-
-.collection-item__maincontainer,
 .view2-item__maincontainer,
 .view3-item__maincontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 100vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: #EEEEEE;
   border-bottom: 1px solid #222222;
 }
-
-.collection-basicinfos__subcontainer,
-.view2-basicinfos__subcontainer,
-.view3-basicinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.view2-item__maincontainer .top-informations,
+.view2-item__maincontainer .bot-informations,
+.view3-item__maincontainer .top-informations,
+.view3-item__maincontainer .bot-informations {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: aliceblue;
 }
-.collection-basicinfos__subcontainer.view3,
-.view2-basicinfos__subcontainer.view3,
-.view3-basicinfos__subcontainer.view3 {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%;
-  padding: 5px;
-}
-
-.collection-statesinfos__subcontainer,
-.view2-statesinfos__subcontainer,
-.view3-statesinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.view2-item__maincontainer .top-informations .select__bar,
+.view2-item__maincontainer .bot-informations .select__bar,
+.view3-item__maincontainer .top-informations .select__bar,
+.view3-item__maincontainer .bot-informations .select__bar {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  padding: 5px;
-}
-.collection-statesinfos__subcontainer .collection-items__prices,
-.collection-statesinfos__subcontainer .collection-items__date,
-.collection-statesinfos__subcontainer .collection-items__state,
-.collection-statesinfos__subcontainer .view2-items__prices,
-.collection-statesinfos__subcontainer .view2-items__date,
-.collection-statesinfos__subcontainer .view2-items__state,
-.collection-statesinfos__subcontainer .view3-items__prices,
-.collection-statesinfos__subcontainer .view3-items__date,
-.collection-statesinfos__subcontainer .view3-items__state,
-.view2-statesinfos__subcontainer .collection-items__prices,
-.view2-statesinfos__subcontainer .collection-items__date,
-.view2-statesinfos__subcontainer .collection-items__state,
-.view2-statesinfos__subcontainer .view2-items__prices,
-.view2-statesinfos__subcontainer .view2-items__date,
-.view2-statesinfos__subcontainer .view2-items__state,
-.view2-statesinfos__subcontainer .view3-items__prices,
-.view2-statesinfos__subcontainer .view3-items__date,
-.view2-statesinfos__subcontainer .view3-items__state,
-.view3-statesinfos__subcontainer .collection-items__prices,
-.view3-statesinfos__subcontainer .collection-items__date,
-.view3-statesinfos__subcontainer .collection-items__state,
-.view3-statesinfos__subcontainer .view2-items__prices,
-.view3-statesinfos__subcontainer .view2-items__date,
-.view3-statesinfos__subcontainer .view2-items__state,
-.view3-statesinfos__subcontainer .view3-items__prices,
-.view3-statesinfos__subcontainer .view3-items__date,
-.view3-statesinfos__subcontainer .view3-items__state {
-  margin-bottom: 4px;
-}
-.collection-statesinfos__subcontainer .collection-items__prices span,
-.collection-statesinfos__subcontainer .collection-items__date span,
-.collection-statesinfos__subcontainer .collection-items__state span,
-.collection-statesinfos__subcontainer .view2-items__prices span,
-.collection-statesinfos__subcontainer .view2-items__date span,
-.collection-statesinfos__subcontainer .view2-items__state span,
-.collection-statesinfos__subcontainer .view3-items__prices span,
-.collection-statesinfos__subcontainer .view3-items__date span,
-.collection-statesinfos__subcontainer .view3-items__state span,
-.view2-statesinfos__subcontainer .collection-items__prices span,
-.view2-statesinfos__subcontainer .collection-items__date span,
-.view2-statesinfos__subcontainer .collection-items__state span,
-.view2-statesinfos__subcontainer .view2-items__prices span,
-.view2-statesinfos__subcontainer .view2-items__date span,
-.view2-statesinfos__subcontainer .view2-items__state span,
-.view2-statesinfos__subcontainer .view3-items__prices span,
-.view2-statesinfos__subcontainer .view3-items__date span,
-.view2-statesinfos__subcontainer .view3-items__state span,
-.view3-statesinfos__subcontainer .collection-items__prices span,
-.view3-statesinfos__subcontainer .collection-items__date span,
-.view3-statesinfos__subcontainer .collection-items__state span,
-.view3-statesinfos__subcontainer .view2-items__prices span,
-.view3-statesinfos__subcontainer .view2-items__date span,
-.view3-statesinfos__subcontainer .view2-items__state span,
-.view3-statesinfos__subcontainer .view3-items__prices span,
-.view3-statesinfos__subcontainer .view3-items__date span,
-.view3-statesinfos__subcontainer .view3-items__state span {
-  font-weight: 600;
-}
-
-.checkbox {
-  cursor: pointer;
-  border-color: #a79300;
-  width: 30px;
-  height: 30px;
-  margin-top: 10px;
-}
-
-.select__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 80px;
+  justify-content: center;
+  width: 36px;
   background-color: #222222;
 }
-
-.collection-basicinfos__container,
-.view2-basicinfos__container,
-.view3-basicinfos__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.view2-item__maincontainer .top-informations .select__bar .checkbox,
+.view2-item__maincontainer .bot-informations .select__bar .checkbox,
+.view3-item__maincontainer .top-informations .select__bar .checkbox,
+.view3-item__maincontainer .bot-informations .select__bar .checkbox {
+  cursor: pointer;
+  border-color: #a79300;
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+.view2-item__maincontainer .top-informations .view2-items__coverimage,
+.view2-item__maincontainer .top-informations .view3-items__coverimage,
+.view2-item__maincontainer .bot-informations .view2-items__coverimage,
+.view2-item__maincontainer .bot-informations .view3-items__coverimage,
+.view3-item__maincontainer .top-informations .view2-items__coverimage,
+.view3-item__maincontainer .top-informations .view3-items__coverimage,
+.view3-item__maincontainer .bot-informations .view2-items__coverimage,
+.view3-item__maincontainer .bot-informations .view3-items__coverimage {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 80%;
+  justify-content: center;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+}
+.view2-item__maincontainer .top-informations .view2-items__coverimage > img,
+.view2-item__maincontainer .top-informations .view3-items__coverimage > img,
+.view2-item__maincontainer .bot-informations .view2-items__coverimage > img,
+.view2-item__maincontainer .bot-informations .view3-items__coverimage > img,
+.view3-item__maincontainer .top-informations .view2-items__coverimage > img,
+.view3-item__maincontainer .top-informations .view3-items__coverimage > img,
+.view3-item__maincontainer .bot-informations .view2-items__coverimage > img,
+.view3-item__maincontainer .bot-informations .view3-items__coverimage > img {
+  box-shadow: 5px 5px 5px var(--clr__grey6D);
+  width: 140px;
+  height: auto;
+  min-height: 140px;
+}
+.view2-item__maincontainer .top-informations .view2-items__coverimage > :hover,
+.view2-item__maincontainer .top-informations .view3-items__coverimage > :hover,
+.view2-item__maincontainer .bot-informations .view2-items__coverimage > :hover,
+.view2-item__maincontainer .bot-informations .view3-items__coverimage > :hover,
+.view3-item__maincontainer .top-informations .view2-items__coverimage > :hover,
+.view3-item__maincontainer .top-informations .view3-items__coverimage > :hover,
+.view3-item__maincontainer .bot-informations .view2-items__coverimage > :hover,
+.view3-item__maincontainer .bot-informations .view3-items__coverimage > :hover {
+  cursor: pointer;
+}
+.view2-item__maincontainer .top-informations .view2-basicinfos__container,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 5px;
 }
-
-.collection-arrow,
-.view2-arrow,
-.view3-arrow {
-  position: absolute;
-  right: 0px;
-}
-
-.collection-items__title,
-.view2-items__title,
-.view3-items__title {
+.view2-item__maincontainer .top-informations .view2-basicinfos__container .view2-items__title,
+.view2-item__maincontainer .top-informations .view2-basicinfos__container .view3-items__title,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container .view2-items__title,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container .view3-items__title,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container .view2-items__title,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container .view3-items__title,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container .view2-items__title,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container .view3-items__title,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container .view2-items__title,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container .view3-items__title,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container .view2-items__title,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container .view3-items__title,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container .view2-items__title,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container .view3-items__title,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container .view2-items__title,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container .view3-items__title {
   border-radius: 5px;
   word-break: break-word;
   font-size: 12px;
@@ -2337,134 +1211,445 @@ First Part of CSS collection view 2
   text-align: left;
   font-family: "PTSans-Bold";
 }
-.collection-items__title h3,
-.view2-items__title h3,
-.view3-items__title h3 {
+.view2-item__maincontainer .top-informations .view2-basicinfos__container .view2-items__title h3,
+.view2-item__maincontainer .top-informations .view2-basicinfos__container .view3-items__title h3,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container .view2-items__title h3,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container .view3-items__title h3,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container .view2-items__title h3,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container .view3-items__title h3,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container .view2-items__title h3,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container .view3-items__title h3,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container .view2-items__title h3,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container .view3-items__title h3,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container .view2-items__title h3,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container .view3-items__title h3,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container .view2-items__title h3,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container .view3-items__title h3,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container .view2-items__title h3,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container .view3-items__title h3 {
   margin-top: auto;
   margin-bottom: auto;
   padding: 5px;
 }
-
-.bot-items__subcontainer {
-  margin-left: 85px;
+.view2-item__maincontainer .top-informations .view2-basicinfos__container .view2-items__subtitle,
+.view2-item__maincontainer .top-informations .view2-basicinfos__container .view3-items__subtitle,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container .view2-items__subtitle,
+.view2-item__maincontainer .top-informations .view3-basicinfos__container .view3-items__subtitle,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container .view2-items__subtitle,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__container .view3-items__subtitle,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container .view2-items__subtitle,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__container .view3-items__subtitle,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container .view2-items__subtitle,
+.view3-item__maincontainer .top-informations .view2-basicinfos__container .view3-items__subtitle,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container .view2-items__subtitle,
+.view3-item__maincontainer .top-informations .view3-basicinfos__container .view3-items__subtitle,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container .view2-items__subtitle,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__container .view3-items__subtitle,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container .view2-items__subtitle,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__container .view3-items__subtitle {
+  text-align: left;
+  font-family: "PTSans-Regular";
+  font-size: 14px;
 }
-
-.bot-items__prices h4 {
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer.view3,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer.view3,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer.view3,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer.view3,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer.view3,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer.view3,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer.view3,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer.view3 {
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
   padding: 5px;
 }
-
-.bot-items__prices h4 span {
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__subtitle,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__subtitle,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__editor,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__editor,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__year,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__year,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__plateform,
+.view2-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__plateform,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__subtitle,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__subtitle,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__editor,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__editor,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__year,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__year,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__plateform,
+.view2-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__plateform,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__subtitle,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__subtitle,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__editor,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__editor,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__year,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__year,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__plateform,
+.view2-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__plateform,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__subtitle,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__subtitle,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__editor,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__editor,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__year,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__year,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__plateform,
+.view2-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__plateform,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__subtitle,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__subtitle,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__editor,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__editor,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__year,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__year,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view2-items__plateform,
+.view3-item__maincontainer .top-informations .view2-basicinfos__subcontainer .view3-items__plateform,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__subtitle,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__subtitle,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__editor,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__editor,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__year,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__year,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view2-items__plateform,
+.view3-item__maincontainer .top-informations .view3-basicinfos__subcontainer .view3-items__plateform,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__subtitle,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__subtitle,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__editor,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__editor,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__year,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__year,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view2-items__plateform,
+.view3-item__maincontainer .bot-informations .view2-basicinfos__subcontainer .view3-items__plateform,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__subtitle,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__subtitle,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__editor,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__editor,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__year,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__year,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view2-items__plateform,
+.view3-item__maincontainer .bot-informations .view3-basicinfos__subcontainer .view3-items__plateform {
+  padding: 2px;
+  margin-right: 5%;
+  font-size: 12px;
+  font-family: "PTSans-Italic";
+}
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px;
+}
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__state,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__prices,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__date,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__state,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__state,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__prices,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__date,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__state,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__state,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__prices,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__date,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__state,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__state,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__prices,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__date,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__state,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__state,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__prices,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__date,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__state,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__state,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__prices,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__date,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__state,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__state,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__prices,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__date,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__state,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__state,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__prices,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__date,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__state {
+  margin-bottom: 4px;
+}
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices span,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date span,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__state span,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__prices span,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__date span,
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__state span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__state span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__prices span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__date span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__state span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__state span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__prices span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__date span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__state span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__state span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__prices span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__date span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__state span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__state span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__prices span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__date span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view3-items__state span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__state span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__prices span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__date span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view3-items__state span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__state span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__prices span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__date span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view3-items__state span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__state span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__prices span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__date span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view3-items__state span {
+  font-weight: 600;
+}
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices > h4,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices > h4,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices > h4,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices > h4,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices > h4,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices > h4,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices > h4,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices > h4 {
+  padding: 5px;
+}
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices > span,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices > span,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices > span,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices > span,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__prices > span,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__prices > span,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__prices > span,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__prices > span {
   float: right;
 }
-
-.bot-items__date-state {
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date-state,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date-state,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date-state,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date-state,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date-state,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date-state,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date-state,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date-state {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-.bot-items__date-state p {
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date-state > p,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date-state > p,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date-state > p,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date-state > p,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date-state > p,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date-state > p,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date-state > p,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date-state > p {
   margin: 5px;
   font-size: 12px;
   font-family: "PTSans-Italic";
 }
-
-.bot-items__date-state h5 {
+.view2-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date-state > h5,
+.view2-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date-state > h5,
+.view2-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date-state > h5,
+.view2-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date-state > h5,
+.view3-item__maincontainer .top-informations .view2-statesinfos__subcontainer .view2-items__date-state > h5,
+.view3-item__maincontainer .top-informations .view3-statesinfos__subcontainer .view2-items__date-state > h5,
+.view3-item__maincontainer .bot-informations .view2-statesinfos__subcontainer .view2-items__date-state > h5,
+.view3-item__maincontainer .bot-informations .view3-statesinfos__subcontainer .view2-items__date-state > h5 {
   margin: 5px;
   font-size: 12px;
   font-family: "PTSans-Bold";
 }
-
-.bot-items__notes {
-  margin: 5px;
+.view2-item__maincontainer .top-informations .bot-informations,
+.view2-item__maincontainer .bot-informations .bot-informations,
+.view3-item__maincontainer .top-informations .bot-informations,
+.view3-item__maincontainer .bot-informations .bot-informations {
+  padding: 0px;
 }
-
-.bot-items__notes,
-.edit-notes:hover {
+.view2-item__maincontainer .top-informations .arrow,
+.view2-item__maincontainer .bot-informations .arrow,
+.view3-item__maincontainer .top-informations .arrow,
+.view3-item__maincontainer .bot-informations .arrow {
+  position: absolute;
+  right: 0px;
+}
+.view2-item__maincontainer .top-informations .arrow > img,
+.view2-item__maincontainer .bot-informations .arrow > img,
+.view3-item__maincontainer .top-informations .arrow > img,
+.view3-item__maincontainer .bot-informations .arrow > img {
+  cursor: pointer;
+  width: 35px;
+  height: 25px;
+}
+.view2-item__maincontainer .view2-statesinfos__subcontainer .view2-items__notes:hover,
+.view2-item__maincontainer .view2-statesinfos__subcontainer .edit-notes:hover,
+.view3-item__maincontainer .view2-statesinfos__subcontainer .view2-items__notes:hover,
+.view3-item__maincontainer .view2-statesinfos__subcontainer .edit-notes:hover {
   cursor: pointer;
 }
-
-.form-notes {
+.view2-item__maincontainer .view2-statesinfos__subcontainer .view2-items__notes,
+.view3-item__maincontainer .view2-statesinfos__subcontainer .view2-items__notes {
+  margin: 5px;
+}
+.view2-item__maincontainer .note-informations,
+.view3-item__maincontainer .note-informations {
+  display: flex;
+  justify-content: flex-start;
+}
+.view2-item__maincontainer .note-informations .form-notes,
+.view3-item__maincontainer .note-informations .form-notes {
   text-align: center;
+}
+.view2-item__maincontainer .note-informations .form-notes .input-notes,
+.view3-item__maincontainer .note-informations .form-notes .input-notes {
+  border-radius: 5px;
+  border: solid 1px black;
+  padding: 5px;
+  width: 95%;
+}
+
+.note-informations.hidden,
+.bot-informations.hidden {
+  display: none;
 }
 
 .overlay__maincontainer {
-  position: fixed;
+  position: absolute;
   z-index: 3;
-  width: 340px;
-  height: -webkit-fit-content;
+  display: flex;
+  flex-direction: column;
+  width: 99%;
   height: -moz-fit-content;
   height: fit-content;
-  top: 170px;
-  left: -380px;
-  overflow-y: auto;
-  border: 2px solid #222222;
-  border-radius: 0 10px;
+  top: -14px;
+  left: -1000px;
+  border: 1px solid #222222;
   margin: 2px 0;
-  padding: 10px;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 .overlay__maincontainer.show {
   left: 0px;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
 .overlay__box--filter {
   margin-bottom: 40px;
+  padding: 10px;
 }
 .overlay__box--filter .title__filter {
   margin-bottom: 5px;
-  background-color: rgba(251, 243, 161, 0.3882352941);
+  background-color: #222222;
   border-radius: 5px;
-  -webkit-box-shadow: #a79300 -1px 1px 2px 0px;
-          box-shadow: #a79300 -1px 1px 2px 0px;
+  padding: 4px;
 }
 .overlay__box--filter .title__filter > h2 {
   font-family: "Inter";
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
   line-height: 27px;
+  color: #a79300;
 }
 .overlay__box--filter .list__filter--box .filters-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .overlay__box--filter .list__filter--box .filters-box .name_filter > p {
   font-size: 14px;
   font-weight: 400;
   line-height: 27px;
+  color: #222222;
 }
 .overlay__box--filter .list__filter--box .filters-box .quantity_filter > p {
+  font-size: 12px;
   color: #222222;
 }
 
 @media screen and (min-width: 744px) {
   .overlay__maincontainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    top: 112px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: -78px;
     left: -2160px;
-    width: 80%;
   }
   .overlay__maincontainer .overlay__box--filter {
     width: 30%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+.breadcrumb__nav {
+  margin-top: 30px;
+  margin-left: 10px;
+  font-family: "Inter";
+}
+.breadcrumb__nav.filter-bar {
+  margin-top: 100px;
+}
+.breadcrumb__nav .breadcrumb__list {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb__nav .breadcrumb__arrow:before {
+  content: "→";
+  font-size: 20px;
+}
+
+.collection__page {
+  margin-top: 100px;
+}

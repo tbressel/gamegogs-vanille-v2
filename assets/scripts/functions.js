@@ -116,8 +116,8 @@ function deleteContainer(id) {
 }
 
 // showing the filter barre 
-function setFilterBar() {
-
+function setFilterBar(pageName) {
+    if(currentPage === pageName) return
     document.getElementById("filter-nav").classList.toggle("show")
 
 }
@@ -282,7 +282,7 @@ function displayGenre() {
         // clone hte template
         const genreFilterItem = document.importNode(genreFilterTemplate.content, true);
         genreFilterItem.querySelector('.name_filter p').textContent = genre;
-        genreFilterItem.querySelector('.quantity_filter p').textContent = genreCount[genre] + ' / ' + (totalGamesByGenre[genre] || 0);
+        genreFilterItem.querySelector('.quantity_filter p').textContent = genreCount[genre] + ' jeux possédé(s) sur ' + (totalGamesByGenre[genre] || 0);
         genreFilterElement.appendChild(genreFilterItem);
     }
 
@@ -346,7 +346,7 @@ function displaySupport() {
         // clone the template
         const supportFilterItem = document.importNode(supportFilterTemplate.content, true);
         supportFilterItem.querySelector('.name_filter p').textContent = support;
-        supportFilterItem.querySelector('.quantity_filter p').textContent = supportCount[support] + ' / ' + (totalGamesBySupport[support] || 0);
+        supportFilterItem.querySelector('.quantity_filter p').textContent = supportCount[support] + ' jeux possédé(s) sur ' + (totalGamesBySupport[support] || 0 );
         supportFilterElement.appendChild(supportFilterItem);
     }
 
@@ -405,7 +405,10 @@ function displayPlateform() {
         const plateformFilterItem = document.importNode(plateformFilterTemplate.content, true);
         plateformFilterItem.querySelector('.name_filter p').textContent = plateform;
         plateformFilterItem.querySelector('.quantity_filter p').textContent =
-            plateformCount[plateform] + ' / ' + (totalGamesByPlateform[plateform] || 0);
+            plateformCount[plateform] + ' jeux possédé(s) sur ' + (totalGamesByPlateform[plateform] || 0);
         plateformFilterElement.appendChild(plateformFilterItem);
     }
 }
+
+
+

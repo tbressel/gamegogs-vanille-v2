@@ -1,14 +1,30 @@
-/*
-------------------------------------
-First Part of CSS collection view 1
-------------------------------------
-*/
+.view1-items__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    padding: 20px;
+    height: fit-content;
+    background-color: var(--clr__whiteFF-alpha);
 
+    .view1-items__maintitle {
+        text-align: center;
+        margin: 20px;
+        font-size: 24px;
+        font-family: 'Inter';
+    }
+}
 
+.view1-items__last-items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-
-
-.myitems-items__last-items {
+.view1-items__last-items {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +33,7 @@ First Part of CSS collection view 1
     width: 140px;
 }
 
-.myitems-items__coverimage {
+.view1-items__coverimage {
     overflow: hidden;
     border-radius: 5px;
     width: 140px;
@@ -28,13 +44,13 @@ First Part of CSS collection view 1
     transform: rotate(2deg);
 }
 
-.myitems-items__coverimage:hover {
+.view1-items__coverimage:hover {
     transform: rotate(0deg);
     transition: 500ms ease-in-out;
     cursor: pointer;
 }
 
-.myitems-items__coverimage img {
+.view1-items__coverimage img {
     width: 150px;
     height: auto;
     min-height: 150px;
@@ -44,24 +60,41 @@ First Part of CSS collection view 1
     border: red 4px solid;
 }
 
+.view1-items__title,
+.collection-items__title {
+    text-align: left;
+}
 
-.myitems-items__subtitle,
+
+
+
+.view1-items__subtitle,
 .collection-items__subtitle {
     text-align: left;
-    font-family: 'PTSans-Regular';
+    font-family: 'Inter';
     font-size: 14px;
 }
 
-.myitems-items__plateform,
-.myitems-items__plateform {
-    text-align: right;
-    font-family: 'PTSans-Italic';
+.view1-items__plateform {
+    text-align: left;
+    font-family: 'Inter';
     font-size: 14px;
+
+    & > img {
+        position: relative;
+        height: 21px;
+        top: -180px;
+        left:-20px;
+        padding: 3px 12px !important;
+        border: 1px solid $grey;
+        border-radius: 10px;
+        background-color: $white;
+    }
 }
 
-.myitems-items__footer-list {
+.view1-items__footer-list {
     text-align: right;
-    font-family: 'PTSans-Italic';
+    font-family: 'Inter';
     font-size: 14px;
 }
 
@@ -86,89 +119,94 @@ First Part of CSS collection view 1
     }
 }
 
-.myitems-maxitem__title {
+
+.hidden__field {
+    display: none;
+}
+
+.view1-maxitem__title {
     text-align: left;
     margin-top: 10px;
     margin-left: 10%;
-    font-family: 'PTSans-BoldItalic';
+    font-family: 'Inter-BoldI';
     font-size: 24px;
 }
 
-.myitems-maxitem__subtitle {
+.view1-maxitem__subtitle {
     text-align: left;
     margin-top: 10px;
     margin-left: 10%;
-    font-family: 'PTSans-Bold';
+    font-family: 'Inter';
     font-size: 20px;
 }
 
-.myitems-maxitem__plateform {
+.view1-maxitem__plateform {
     text-align: left;
     margin-left: 10%;
-    font-family: 'PTSans-Bold';
+    font-family: 'Inter';
     font-size: 16px;
     margin-top: 5px;
 }
 
-.myitems-maxitem__year {
+.view1-maxitem__year {
     text-align: left;
     margin-left: 10%;
-    font-family: 'PTSans-Regular';
+    font-family: 'Inter';
     font-size: 16px;
     margin-top: 5px;
 }
 
-.myitems-maxitem__coverimage {
+.view1-maxitem__coverimage {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 5px;
 }
 
-.myitems-maxitem__coverimage img {
+.view1-maxitem__coverimage img {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
     max-width: 80%;
     min-width: 80%;
 }
 
 
-.myitems-maxitem__editor {
+.view1-maxitem__editor {
     margin-top: 5px;
     margin-left: 10%;
-    font-family: 'PTSans-Bold';
+    font-family: 'Inter';
     font-size: 16px;
 }
 
-.myitems-maxitem__genre {
+.view1-maxitem__genre {
     margin-top: 30px;
     margin-left: 10%;
-    font-family: 'PTSans-Regular';
+    font-family: 'Inter';
     font-size: 14px;
 }
 
-.myitems-maxitem__subcontainer {
+.view1-maxitem__subcontainer {
     margin-top: 5px;
     margin-left: 10%;
-    font-family: 'PTSans-Regular';
+    font-family: 'Inter';
     font-size: 12px;
 }
 
-.myitems-maxitem__country {
+.view1-maxitem__country {
     color: var(--clr__grey6D);
 }
 
-.myitems-maxitem__ref {
+.view1-maxitem__ref {
     color: var(--clr__grey6D);
 }
 
-.myitems-maxitem__support {
+.view1-maxitem__support {
     color: var(--clr__grey6D);
 }
 
-.myitems-maxitem__price {
+.view1-maxitem__price {
     margin-top: 15px;
     margin-left: 10%;
-    font-family: 'PTSans-Regular';
+    font-family: 'Inter';
     font-size: 13px;
     line-height: 9.5px;
     color: var(--clr__grey6D);
@@ -191,13 +229,49 @@ First Part of CSS collection view 1
 }
 
 .input-notes {
+    /* width: 150%;
+    height: 120px; */
     border-radius: 5px;
     border: solid 1px black;
+    /* background-color: aliceblue; */
     padding: 5px;
-    width: 95%;
+}
+
+.top-informations,
+.bot-informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100vw;
+    height: fit-content;
+    background-color: aliceblue;
+    /* padding: 5px; */
+}
+
+.bot-informations {
+    padding: 0px;
+}
+
+.collection-basicinfos__subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
+.select__bar {
+    display: flex;
+    width: 22px;
+    background-color: rgb(220, 220, 245);
+}
+
+.collection-basicinfos__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 5px;
+}
 
 .arrow img {
     width: 35px;
@@ -225,79 +299,16 @@ First Part of CSS collection view 1
 }
 
 
-
-
-/*
------------------------------------
-First Part of CSS collection view 2
------------------------------------
-*/
-.collection-view-2 {
-    position: relative;
-    margin-top: 45px
-}
-
-
-
-
-.myitems-maxitem__price {
-    margin-top: 15px;
-    margin-left: 10%;
-    font-family: 'PTSans-Regular';
-    font-size: 13px;
-    line-height: 9.5px;
-    color: var(--clr__grey6D);
-}
-
-
-
-
-.collection-arrow {
-    position: absolute;
-    right: 40px;
-}
-
-
-.bot-items__subcontainer {
-    margin-left: 85px;
-}
-
-.bot-items__prices h4 {
-    padding: 5px;
-}
-
-.bot-items__prices h4 span {
-    float: right;
-}
-
-
-.bot-items__date-state {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.bot-items__date-state p {
-    margin: 5px;
+.collection-items__title {
     font-size: 12px;
-    font-family: 'PTSans-Italic';
+    margin-top: 0px;
 }
 
-.bot-items__date-state h5 {
-    margin: 5px;
+.collection-items__subtitle,
+.collection-items__editor,
+.collection-items__year,
+.collection-items__plateform {
     font-size: 12px;
-    font-family: 'PTSans-Bold';
+    font-family: 'Inter';
 
-}
-
-.bot-items__notes {
-    margin: 5px;
-}
-
-.bot-items__notes,
-.edit-notes:hover {
-    cursor: pointer;
-}
-
-.form-notes {
-    text-align: center;
 }

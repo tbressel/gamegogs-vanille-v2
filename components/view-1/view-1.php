@@ -1,7 +1,7 @@
 <section class="myitems-items__container">
-    <div class="myitems-items__maintitle">
+    <!-- <div class="myitems-items__maintitle">
         <h2>Jeux que je possède</h2>
-    </div>
+    </div> -->
     <div id="list-items" class="myitems-items__last-items-container"></div>
 </section>
 
@@ -101,18 +101,18 @@
         </div>
         <div id="view2-items-bot" class="bot-informations hidden">
             <div class="select__bar"></div>
-            <div class="bot-items__subcontainer">
-                <div class="bot-items__prices">
-                    <h4>Minimuim<span>€100,50</span></h4>
+            <div class="view2-statesinfos__subcontainer">
+                <div class="view2-items__prices">
+                    <h4>Minimum<span>€100,50</span></h4>
                     <h4>Moyen<span>€60,78</span></h4>
                     <h4>Maximum<span>€345,78</span></h4>
                 </div>
 
-                <div class="bot-items__date-state">
+                <div class="view2-items__date-state">
                     <h5>Ajouté <span>il y a 1 ans et 6 mois</span></h5>
                     <p class="green-color" >Très bon état - presque Mint</p>
                 </div>
-                <div class="bot-items__notes">
+                <div class="view2-items__notes">
                     <h4>Notes <span id="edit-notes" class="edit-notes"> Editer les notes </span></h4>
                 </div>
             </div>

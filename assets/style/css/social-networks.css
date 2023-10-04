@@ -1,30 +1,17 @@
 .socialnetworks__container {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
+  order: 0;
 }
 .socialnetworks__container .socialnetwork__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .socialnetworks__container .socialnetwork__block .socialnetwork__title {
   display: none;
 }
 .socialnetworks__container .socialnetwork__block .socialnetworkmenu__follow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 0 0 20px 0;
 }
 .socialnetworks__container .socialnetwork__block .socialnetworkmenu__text {
@@ -37,9 +24,7 @@
 
 @media screen and (min-width: 744px) {
   .socialnetworks__container {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   .socialnetworks__container .socialnetworkmenu__text {
     display: inline-block !important;
@@ -55,35 +40,21 @@
     margin-left: 50px;
   }
   .socialnetwork__title {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     margin: 10px;
   }
   .socialnetwork__title > p {
     font-weight: 400;
   }
   .socialnetworkmenu__follow {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column !important;
+    align-items: flex-start;
     margin: 10px;
   }
   .socialnetworkmenu__li {
     margin-bottom: 20px;
   }
-}/*# sourceMappingURL=social-networks.css.map */
+}

@@ -9,10 +9,12 @@
         <meta name=" robots" content=" index, follow">
         
         <link rel="icon" href="./favicon.ico">
-        <link rel="stylesheet" href="./assets/style/css/index.css">
+        <link rel="stylesheet"  type="text/css" href="./assets/style/css/index.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./assets/style/css/impression-min.css" media="print">
     </head>
     
     <body>
+
    
     <header class="black-bg">
         <?php include('./components/header/header.php'); 
@@ -22,8 +24,8 @@
     
     <nav class="submenu__container">
         <?php include('./components/header/nagivation/navigation.php'); ?>
-        </nav>
-        
+    </nav>
+
         <main id="main" class="main__container">
         <?php include('./pages/home/home.php');
         ?>

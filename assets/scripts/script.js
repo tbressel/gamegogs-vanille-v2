@@ -1,3 +1,7 @@
+// declare breadscrum
+let currentPage = "accueil";
+
+
 
 // Path to json file 
 const gamesListPath = './bdd/games-list.JSON';
@@ -23,6 +27,11 @@ document.getElementById('footer-menu').addEventListener('click', (event) => {
     reverseFooterArrow(event);
 })
 
+
+
+
+
+
 document.getElementById('collection').addEventListener('click', async () => {
     // close submenu
     closeSubMenu();
@@ -31,7 +40,7 @@ document.getElementById('collection').addEventListener('click', async () => {
     deleteContainer('main');
 
     // eneble filter bar
-    setFilterBar(true);
+    setFilterBar("collection");
 
     // awaiting for the page content
     await insertPageContent("collection.php", "pages/collection/", "main");
@@ -45,6 +54,7 @@ document.getElementById('collection').addEventListener('click', async () => {
 
     displayPlateform();
 })
+
 
 document.getElementById('filter-nav').addEventListener('click', (event) => {
     if (event.target.getAttribute('alt') === "view1") {
@@ -75,9 +85,6 @@ document.getElementById('filter-nav').addEventListener('click', (event) => {
         document.getElementById('overlay-filter').classList.toggle('show');
     }
 })
-
-
-
 
 let globalbotInfoContainer = null;
 let globalNotesInfoContainer = null;

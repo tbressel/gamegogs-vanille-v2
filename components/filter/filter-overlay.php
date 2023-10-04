@@ -47,7 +47,7 @@
 <template id="genre_filter_template">
     <div class="filters-box">
         <div class="name_filter">
-            <p  class=" bluedark-color">
+            <p>
                 FPS
             </p>
         </div>
@@ -62,7 +62,7 @@
 <template id="support_filter_template">
     <div class="filters-box">
         <div class="name_filter">
-            <p  class=" bluedark-color">
+            <p>
                 Disuqtte
             </p>
         </div>
@@ -76,8 +76,8 @@
 <template id="plateform_filter_template">
     <div class="filters-box">
         <div class="name_filter">
-            <p  class=" bluedark-color">
-                Disuqtte
+            <p>
+                Disuqette
             </p>
         </div>
         <div class="quantity_filter">
