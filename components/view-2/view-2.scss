@@ -6,31 +6,7 @@ First Part of CSS collection view 1
 
 
 
-.myitems-items__container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    margin-bottom: 100px;
-    padding: 20px;
-    height: fit-content;
-    background-color: var(--clr__whiteFF-alpha);
-}
 
-.myitems-items__maintitle {
-    text-align: center;
-    margin: 20px;
-    font-size: 24px;
-    font-family: 'PTSans-Bold';
-}
-
-.myitems-items__last-items-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-}
 
 .myitems-items__last-items {
     display: flex;
@@ -68,12 +44,6 @@ First Part of CSS collection view 1
     border: red 4px solid;
 }
 
-.myitems-items__title,
-.collection-items__title {
-    text-align: left;
-    margin-top: 10px;
-    font-family: 'PTSans-Bold';
-}
 
 .myitems-items__subtitle,
 .collection-items__subtitle {
@@ -114,11 +84,6 @@ First Part of CSS collection view 1
     100% {
         width: 100vw;
     }
-}
-
-
-.hidden__field {
-    display: none;
 }
 
 .myitems-maxitem__title {
@@ -232,41 +197,7 @@ First Part of CSS collection view 1
     width: 95%;
 }
 
-.top-informations,
-.bot-informations {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100vw;
-    height: fit-content;
-    background-color: aliceblue;
-    /* padding: 5px; */
-}
 
-.bot-informations {
-    padding: 0px;
-}
-
-.collection-basicinfos__subcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.select__bar {
-    display: flex;
-    width: 22px;
-    background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
-    padding: 5px;
-}
 
 .arrow img {
     width: 35px;
@@ -294,19 +225,7 @@ First Part of CSS collection view 1
 }
 
 
-.collection-items__title {
-    font-size: 12px;
-    margin-top: 0px;
-}
 
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-    font-size: 12px;
-    font-family: 'PTSans-Italic';
-
-}
 
 /*
 -----------------------------------
@@ -330,37 +249,7 @@ First Part of CSS collection view 2
     color: var(--clr__grey6D);
 }
 
-.collection-item__maincontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100vw;
-    height: fit-content;
-    background-color: aliceblue;
-    /* padding: 5px; */
 
-}
-
-.collection-basicinfos__subcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.select__bar {
-    display: flex;
-    width: 22px;
-    background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
-    padding: 5px;
-}
 
 
 .collection-arrow {
@@ -368,16 +257,6 @@ First Part of CSS collection view 2
     right: 40px;
 }
 
-.collection-items__title {
-    margin-top: -5px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-    padding: 2px;
-}
 
 .bot-items__subcontainer {
     margin-left: 85px;

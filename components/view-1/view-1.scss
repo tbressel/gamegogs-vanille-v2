@@ -3,9 +3,6 @@
 First Part of CSS collection view 1
 ------------------------------------
 */ 
-
-
-
 .view1-items__container {
     position: relative;
     display: flex;
@@ -68,8 +65,7 @@ First Part of CSS collection view 1
     border: red 4px solid;
 }
 
-.view1-items__title,
-.collection-items__title {
+.view1-items__title {
     text-align: left;
 }
 
@@ -128,9 +124,6 @@ First Part of CSS collection view 1
 }
 
 
-.hidden__field {
-    display: none;
-}
 
 .view1-maxitem__title {
     text-align: left;
@@ -245,41 +238,9 @@ First Part of CSS collection view 1
     padding: 5px;
 }
 
-.top-informations,
-.bot-informations {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100vw;
-    height: fit-content;
-    background-color: aliceblue;
-    /* padding: 5px; */
-}
-
-.bot-informations {
-    padding: 0px;
-}
-
-.collection-basicinfos__subcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 
-.select__bar {
-    display: flex;
-    width: 22px;
-    background-color: rgb(220, 220, 245);
-}
 
-.collection-basicinfos__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
-    padding: 5px;
-}
 
 .arrow img {
     width: 35px;
@@ -307,16 +268,3 @@ First Part of CSS collection view 1
 }
 
 
-.collection-items__title {
-    font-size: 12px;
-    margin-top: 0px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-    font-size: 12px;
-    font-family: 'Inter';
-
-}

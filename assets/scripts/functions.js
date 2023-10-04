@@ -172,13 +172,13 @@ function displayMyItemsView2(templateId, userGames) {
         const templateContent = document.importNode(listItemsTemplate.content, true);
 
         // construct elements of the clone template
-        templateContent.querySelector('.collection-item__maincontainer').setAttribute('id', `${game.id_videogame}`);
-        templateContent.querySelector('.collection-items__coverimage img').setAttribute("src", `./assets/${game.coverpic_videogame}`);
-        templateContent.querySelector('.collection-items__title h3').textContent = game.title_videogame;
-        templateContent.querySelector('.collection-items__subtitle h4').textContent = game.subtitle_videogame;
-        templateContent.querySelector('.collection-items__plateform p').textContent = game.plateform_videogame[0];
-        templateContent.querySelector('.collection-items__year p').textContent = game.year_videogame;
-        templateContent.querySelector('.collection-items__editor p').textContent = game.editor_videogame;
+        templateContent.querySelector('.view2-item__maincontainer').setAttribute('id', `${game.id_videogame}`);
+        templateContent.querySelector('.view2-items__coverimage img').setAttribute("src", `./assets/${game.coverpic_videogame}`);
+        templateContent.querySelector('.view2-items__title h3').textContent = game.title_videogame;
+        templateContent.querySelector('.view2-items__subtitle h4').textContent = game.subtitle_videogame;
+        templateContent.querySelector('.view2-items__plateform p').textContent = game.plateform_videogame[0];
+        templateContent.querySelector('.view2-items__year p').textContent = game.year_videogame;
+        templateContent.querySelector('.view2-items__editor p').textContent = game.editor_videogame;
 
         // send template into DOM
         myitemsContainer.appendChild(templateContent);
@@ -198,12 +198,12 @@ function displayMyItemsView3(templateId, userGames) {
         const templateContent = document.importNode(listItemsTemplate.content, true);
 
         // loading datas into clone
-        templateContent.querySelector('.collection-item__maincontainer').setAttribute('id', `${game.id_videogame}`);
-        //  templateContent.querySelector('.collection-items__coverimage img').setAttribute("src", `./assets/${game.coverpic_videogame}`);
-        templateContent.querySelector('.collection-items__title h3').textContent = game.title_videogame;
-        templateContent.querySelector('.collection-items__plateform p').textContent = game.plateform_videogame[0];
-        templateContent.querySelector('.collection-items__year p').textContent = game.year_videogame;
-        templateContent.querySelector('.collection-items__editor p').textContent = game.editor_videogame;
+        templateContent.querySelector('.view3-item__maincontainer').setAttribute('id', `${game.id_videogame}`);
+        //  templateContent.querySelector('.view3-items__coverimage img').setAttribute("src", `./assets/${game.coverpic_videogame}`);
+        templateContent.querySelector('.view3-items__title h3').textContent = game.title_videogame;
+        templateContent.querySelector('.view3-items__plateform p').textContent = game.plateform_videogame[0];
+        templateContent.querySelector('.view3-items__year p').textContent = game.year_videogame;
+        templateContent.querySelector('.view3-items__editor p').textContent = game.editor_videogame;
 
         // Send data to dOM
         myitemsContainer.appendChild(templateContent);

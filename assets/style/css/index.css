@@ -931,11 +931,6 @@ h4 {
   background: linear-gradient(90deg, #a79300, #FFFFFF, #b87700);
 }
 
-/*
-------------------------------------
-First Part of CSS collection view 1
-------------------------------------
-*/
 .lastgames-items__container {
   position: relative;
   display: -webkit-box;
@@ -974,8 +969,7 @@ First Part of CSS collection view 1
       flex-wrap: wrap;
   width: 100%;
 }
-
-.lastgames-items__last-items {
+.lastgames-items__last-items-container .lastgames-items__last-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -990,8 +984,7 @@ First Part of CSS collection view 1
   padding: 10px;
   width: 145px;
 }
-
-.lastgames-items__coverimage {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__coverimage {
   overflow: hidden;
   border-radius: 5px;
   width: 140px;
@@ -1004,46 +997,37 @@ First Part of CSS collection view 1
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
 }
-
-.lastgames-items__coverimage:hover {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__coverimage:hover {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
   cursor: pointer;
 }
-
-.lastgames-items__coverimage img {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__coverimage img {
   width: 150px;
   height: auto;
   min-height: 150px;
 }
-
-.selected__item {
-  border: red 4px solid;
-}
-
-.lastgames-items__title,
-.collection-items__title {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__title,
+.lastgames-items__last-items-container .lastgames-items__last-items .collection-items__title {
   text-align: left;
   margin-top: 10px;
   font-family: "Inter";
   font-weight: 600;
 }
-
-.lastgames-items__subtitle,
-.collection-items__subtitle {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__subtitle,
+.lastgames-items__last-items-container .lastgames-items__last-items .collection-items__subtitle {
   text-align: left;
   font-family: "Inter";
   font-size: 14px;
 }
-
-.lastgames-items__plateform {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__plateform {
   text-align: left;
   font-family: "Inter";
   font-size: 14px;
 }
-.lastgames-items__plateform > img {
+.lastgames-items__last-items-container .lastgames-items__last-items .lastgames-items__plateform > img {
   position: relative;
   height: 21px;
   top: -193px;
@@ -1064,79 +1048,38 @@ First Part of CSS collection view 1
   font-weight: 400;
 }
 
-.display__maxitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: var(--clr__whiteFF);
-  width: 0vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 10px;
-  line-height: 15px;
-  -webkit-animation: maxify 10ms forwards;
-          animation: maxify 10ms forwards;
-}
-
-@-webkit-keyframes maxify {
-  0% {
-    width: 0vw;
-  }
-  100% {
-    width: 100vw;
-  }
-}
-
-@keyframes maxify {
-  0% {
-    width: 0vw;
-  }
-  100% {
-    width: 100vw;
-  }
-}
 .hidden__field {
   display: none;
 }
-
-.lastgames-maxitem__title {
+.hidden__field .lastgames-maxitem__title {
   text-align: left;
   margin-top: 10px;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 24px;
 }
-
-.lastgames-maxitem__subtitle {
+.hidden__field .lastgames-maxitem__subtitle {
   text-align: left;
   margin-top: 10px;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 20px;
 }
-
-.lastgames-maxitem__plateform {
+.hidden__field .lastgames-maxitem__plateform {
   text-align: left;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 16px;
   margin-top: 5px;
 }
-
-.lastgames-maxitem__year {
+.hidden__field .lastgames-maxitem__year {
   text-align: left;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 16px;
   margin-top: 5px;
 }
-
-.lastgames-maxitem__coverimage {
+.hidden__field .lastgames-maxitem__coverimage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1149,193 +1092,46 @@ First Part of CSS collection view 1
           justify-content: center;
   margin-top: 5px;
 }
-
-.lastgames-maxitem__coverimage img {
+.hidden__field .lastgames-maxitem__coverimage img {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.577);
   max-width: 80%;
   min-width: 80%;
 }
-
-.lastgames-maxitem__editor {
+.hidden__field .lastgames-maxitem__editor {
   margin-top: 5px;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 16px;
 }
-
-.lastgames-maxitem__genre {
+.hidden__field .lastgames-maxitem__genre {
   margin-top: 30px;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 14px;
 }
-
-.lastgames-maxitem__subcontainer {
+.hidden__field .lastgames-maxitem__subcontainer {
   margin-top: 5px;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 12px;
 }
-
-.lastgames-maxitem__country {
+.hidden__field .lastgames-maxitem__subcontainer .lastgames-maxitem__country {
   color: var(--clr__grey6D);
 }
-
-.lastgames-maxitem__ref {
+.hidden__field .lastgames-maxitem__subcontainer .lastgames-maxitem__ref {
   color: var(--clr__grey6D);
 }
-
-.lastgames-maxitem__support {
+.hidden__field .lastgames-maxitem__subcontainer .lastgames-maxitem__support {
   color: var(--clr__grey6D);
 }
-
-.lastgames-maxitem__price {
+.hidden__field .lastgames-maxitem__price {
   margin-top: 15px;
   margin-left: 10%;
   font-family: "Inter";
   font-size: 13px;
   line-height: 9.5px;
   color: var(--clr__grey6D);
-}
-
-.note-informations.hidden,
-.bot-informations.hidden {
-  display: none;
-}
-
-.bit-items__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: columns;
-          flex-direction: columns;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.note-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.input-notes {
-  /* width: 150%;
-  height: 120px; */
-  border-radius: 5px;
-  border: solid 1px black;
-  /* background-color: aliceblue; */
-  padding: 5px;
-}
-
-.top-informations,
-.bot-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: aliceblue;
-  /* padding: 5px; */
-}
-
-.bot-informations {
-  padding: 0px;
-}
-
-.collection-basicinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 22px;
-  background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
-  padding: 5px;
-}
-
-.arrow img {
-  width: 35px;
-  height: 25px;
-}
-
-.collection-items__coverimage:hover {
-  cursor: pointer;
-}
-
-.collection-items__coverimage img {
-  -webkit-box-shadow: 5px 5px 5px var(--clr__grey6D);
-          box-shadow: 5px 5px 5px var(--clr__grey6D);
-  width: 100px;
-  height: auto;
-  min-height: 80px;
-}
-
-.collection-items__coverimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  text-align: center;
-}
-
-.collection-items__title {
-  font-size: 12px;
-  margin-top: 0px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-  font-size: 12px;
-  font-family: "Inter";
 }
 
 /*
@@ -1430,8 +1226,7 @@ First Part of CSS collection view 1
   border: red 4px solid;
 }
 
-.view1-items__title,
-.collection-items__title {
+.view1-items__title {
   text-align: left;
 }
 
@@ -1483,6 +1278,15 @@ First Part of CSS collection view 1
           animation: maxify 10ms forwards;
 }
 
+@-webkit-keyframes maxify {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
 @keyframes maxify {
   0% {
     width: 0vw;
@@ -1491,10 +1295,6 @@ First Part of CSS collection view 1
     width: 100vw;
   }
 }
-.hidden__field {
-  display: none;
-}
-
 .view1-maxitem__title {
   text-align: left;
   margin-top: 10px;
@@ -1626,66 +1426,6 @@ First Part of CSS collection view 1
   padding: 5px;
 }
 
-.top-informations,
-.bot-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: aliceblue;
-  /* padding: 5px; */
-}
-
-.bot-informations {
-  padding: 0px;
-}
-
-.collection-basicinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 22px;
-  background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
-  padding: 5px;
-}
-
 .arrow img {
   width: 35px;
   height: 25px;
@@ -1716,64 +1456,11 @@ First Part of CSS collection view 1
   text-align: center;
 }
 
-.collection-items__title {
-  font-size: 12px;
-  margin-top: 0px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-  font-size: 12px;
-  font-family: "Inter";
-}
-
 /*
 ------------------------------------
 First Part of CSS collection view 1
 ------------------------------------
 */
-.myitems-items__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 20px;
-  margin-bottom: 100px;
-  padding: 20px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: var(--clr__whiteFF-alpha);
-}
-
-.myitems-items__maintitle {
-  text-align: center;
-  margin: 20px;
-  font-size: 24px;
-  font-family: "PTSans-Bold";
-}
-
-.myitems-items__last-items-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-}
-
 .myitems-items__last-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1820,13 +1507,6 @@ First Part of CSS collection view 1
 
 .selected__item {
   border: red 4px solid;
-}
-
-.myitems-items__title,
-.collection-items__title {
-  text-align: left;
-  margin-top: 10px;
-  font-family: "PTSans-Bold";
 }
 
 .myitems-items__subtitle,
@@ -1876,10 +1556,6 @@ First Part of CSS collection view 1
     width: 100vw;
   }
 }
-.hidden__field {
-  display: none;
-}
-
 .myitems-maxitem__title {
   text-align: left;
   margin-top: 10px;
@@ -2009,66 +1685,6 @@ First Part of CSS collection view 1
   width: 95%;
 }
 
-.top-informations,
-.bot-informations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: aliceblue;
-  /* padding: 5px; */
-}
-
-.bot-informations {
-  padding: 0px;
-}
-
-.collection-basicinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 22px;
-  background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
-  padding: 5px;
-}
-
 .arrow img {
   width: 35px;
   height: 25px;
@@ -2099,19 +1715,6 @@ First Part of CSS collection view 1
   text-align: center;
 }
 
-.collection-items__title {
-  font-size: 12px;
-  margin-top: 0px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-  font-size: 12px;
-  font-family: "PTSans-Italic";
-}
-
 /*
 -----------------------------------
 First Part of CSS collection view 2
@@ -2131,75 +1734,9 @@ First Part of CSS collection view 2
   color: var(--clr__grey6D);
 }
 
-.collection-item__maincontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: aliceblue;
-  /* padding: 5px; */
-}
-
-.collection-basicinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 22px;
-  background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
-  padding: 5px;
-}
-
 .collection-arrow {
   position: absolute;
   right: 40px;
-}
-
-.collection-items__title {
-  margin-top: -5px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-  padding: 2px;
 }
 
 .bot-items__subcontainer {
@@ -2266,15 +1803,13 @@ First Part of CSS collection view 1
   height: fit-content;
   background-color: var(--clr__whiteFF-alpha);
 }
-
-.myitems-items__maintitle {
+.myitems-items__container .myitems-items__maintitle {
   text-align: center;
   margin: 20px;
   font-size: 24px;
   font-family: "PTSans-Bold";
 }
-
-.myitems-items__last-items-container {
+.myitems-items__container .myitems-items__last-items-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2288,7 +1823,7 @@ First Part of CSS collection view 1
       flex-wrap: wrap;
   width: 100%;
 }
-.myitems-items__last-items-container p {
+.myitems-items__container .myitems-items__last-items-container p {
   color: #222222;
   font-weight: 400;
 }
@@ -2341,21 +1876,13 @@ First Part of CSS collection view 1
   border: red 4px solid;
 }
 
-.myitems-items__title,
-.collection-items__title {
-  text-align: left;
-  margin-top: 10px;
-  font-family: "PTSans-Bold";
-}
-
-.myitems-items__subtitle,
-.collection-items__subtitle {
+.view2-items__subtitle,
+.view3-items__subtitle {
   text-align: left;
   font-family: "PTSans-Regular";
   font-size: 14px;
 }
 
-.myitems-items__plateform,
 .myitems-items__plateform {
   text-align: right;
   font-family: "PTSans-Italic";
@@ -2395,10 +1922,6 @@ First Part of CSS collection view 1
     width: 100vw;
   }
 }
-.hidden__field {
-  display: none;
-}
-
 .myitems-maxitem__title {
   text-align: left;
   margin-top: 10px;
@@ -2545,47 +2068,10 @@ First Part of CSS collection view 1
   height: -moz-fit-content;
   height: fit-content;
   background-color: aliceblue;
-  /* padding: 5px; */
 }
 
 .bot-informations {
   padding: 0px;
-}
-
-.collection-basicinfos__subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 22px;
-  background-color: rgb(220, 220, 245);
-}
-
-.collection-basicinfos__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
-  padding: 5px;
 }
 
 .arrow img {
@@ -2593,11 +2079,15 @@ First Part of CSS collection view 1
   height: 25px;
 }
 
-.collection-items__coverimage:hover {
+.collection-items__coverimage:hover,
+.view2-items__coverimage:hover,
+.view3-items__coverimage:hover {
   cursor: pointer;
 }
 
-.collection-items__coverimage img {
+.collection-items__coverimage > img,
+.view2-items__coverimage > img,
+.view3-items__coverimage > img {
   -webkit-box-shadow: 5px 5px 5px var(--clr__grey6D);
           box-shadow: 5px 5px 5px var(--clr__grey6D);
   width: 140px;
@@ -2605,7 +2095,9 @@ First Part of CSS collection view 1
   min-height: 140px;
 }
 
-.collection-items__coverimage {
+.collection-items__coverimage,
+.view2-items__coverimage,
+.view3-items__coverimage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2618,15 +2110,32 @@ First Part of CSS collection view 1
   text-align: center;
 }
 
-.collection-items__title {
-  font-size: 12px;
-  margin-top: 0px;
-}
-
 .collection-items__subtitle,
 .collection-items__editor,
 .collection-items__year,
 .collection-items__plateform {
+  padding: 2px;
+  margin-right: 5%;
+  font-size: 12px;
+  font-family: "PTSans-Italic";
+}
+
+.view2-items__subtitle,
+.view2-items__editor,
+.view2-items__year,
+.view2-items__plateform {
+  padding: 2px;
+  margin-right: 5%;
+  font-size: 12px;
+  font-family: "PTSans-Italic";
+}
+
+.view3-items__subtitle,
+.view3-items__editor,
+.view3-items__year,
+.view3-items__plateform {
+  padding: 2px;
+  margin-right: 5%;
   font-size: 12px;
   font-family: "PTSans-Italic";
 }
@@ -2636,7 +2145,8 @@ First Part of CSS collection view 1
 First Part of CSS collection view 2
 -----------------------------------
 */
-.collection-view-2 {
+.collection-view-2,
+.collection-view-3 {
   position: relative;
   margin-top: 45px;
 }
@@ -2650,7 +2160,9 @@ First Part of CSS collection view 2
   color: var(--clr__grey6D);
 }
 
-.collection-item__maincontainer {
+.collection-item__maincontainer,
+.view2-item__maincontainer,
+.view3-item__maincontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2669,7 +2181,9 @@ First Part of CSS collection view 2
   border-bottom: 1px solid #222222;
 }
 
-.collection-basicinfos__subcontainer {
+.collection-basicinfos__subcontainer,
+.view2-basicinfos__subcontainer,
+.view3-basicinfos__subcontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2681,7 +2195,9 @@ First Part of CSS collection view 2
       -ms-flex-pack: center;
           justify-content: center;
 }
-.collection-basicinfos__subcontainer.view3 {
+.collection-basicinfos__subcontainer.view3,
+.view2-basicinfos__subcontainer.view3,
+.view3-basicinfos__subcontainer.view3 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -2693,7 +2209,9 @@ First Part of CSS collection view 2
   padding: 5px;
 }
 
-.collection-statesinfos__subcontainer {
+.collection-statesinfos__subcontainer,
+.view2-statesinfos__subcontainer,
+.view3-statesinfos__subcontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2708,12 +2226,60 @@ First Part of CSS collection view 2
 }
 .collection-statesinfos__subcontainer .collection-items__prices,
 .collection-statesinfos__subcontainer .collection-items__date,
-.collection-statesinfos__subcontainer .collection-items__state {
+.collection-statesinfos__subcontainer .collection-items__state,
+.collection-statesinfos__subcontainer .view2-items__prices,
+.collection-statesinfos__subcontainer .view2-items__date,
+.collection-statesinfos__subcontainer .view2-items__state,
+.collection-statesinfos__subcontainer .view3-items__prices,
+.collection-statesinfos__subcontainer .view3-items__date,
+.collection-statesinfos__subcontainer .view3-items__state,
+.view2-statesinfos__subcontainer .collection-items__prices,
+.view2-statesinfos__subcontainer .collection-items__date,
+.view2-statesinfos__subcontainer .collection-items__state,
+.view2-statesinfos__subcontainer .view2-items__prices,
+.view2-statesinfos__subcontainer .view2-items__date,
+.view2-statesinfos__subcontainer .view2-items__state,
+.view2-statesinfos__subcontainer .view3-items__prices,
+.view2-statesinfos__subcontainer .view3-items__date,
+.view2-statesinfos__subcontainer .view3-items__state,
+.view3-statesinfos__subcontainer .collection-items__prices,
+.view3-statesinfos__subcontainer .collection-items__date,
+.view3-statesinfos__subcontainer .collection-items__state,
+.view3-statesinfos__subcontainer .view2-items__prices,
+.view3-statesinfos__subcontainer .view2-items__date,
+.view3-statesinfos__subcontainer .view2-items__state,
+.view3-statesinfos__subcontainer .view3-items__prices,
+.view3-statesinfos__subcontainer .view3-items__date,
+.view3-statesinfos__subcontainer .view3-items__state {
   margin-bottom: 4px;
 }
 .collection-statesinfos__subcontainer .collection-items__prices span,
 .collection-statesinfos__subcontainer .collection-items__date span,
-.collection-statesinfos__subcontainer .collection-items__state span {
+.collection-statesinfos__subcontainer .collection-items__state span,
+.collection-statesinfos__subcontainer .view2-items__prices span,
+.collection-statesinfos__subcontainer .view2-items__date span,
+.collection-statesinfos__subcontainer .view2-items__state span,
+.collection-statesinfos__subcontainer .view3-items__prices span,
+.collection-statesinfos__subcontainer .view3-items__date span,
+.collection-statesinfos__subcontainer .view3-items__state span,
+.view2-statesinfos__subcontainer .collection-items__prices span,
+.view2-statesinfos__subcontainer .collection-items__date span,
+.view2-statesinfos__subcontainer .collection-items__state span,
+.view2-statesinfos__subcontainer .view2-items__prices span,
+.view2-statesinfos__subcontainer .view2-items__date span,
+.view2-statesinfos__subcontainer .view2-items__state span,
+.view2-statesinfos__subcontainer .view3-items__prices span,
+.view2-statesinfos__subcontainer .view3-items__date span,
+.view2-statesinfos__subcontainer .view3-items__state span,
+.view3-statesinfos__subcontainer .collection-items__prices span,
+.view3-statesinfos__subcontainer .collection-items__date span,
+.view3-statesinfos__subcontainer .collection-items__state span,
+.view3-statesinfos__subcontainer .view2-items__prices span,
+.view3-statesinfos__subcontainer .view2-items__date span,
+.view3-statesinfos__subcontainer .view2-items__state span,
+.view3-statesinfos__subcontainer .view3-items__prices span,
+.view3-statesinfos__subcontainer .view3-items__date span,
+.view3-statesinfos__subcontainer .view3-items__state span {
   font-weight: 600;
 }
 
@@ -2736,7 +2302,9 @@ First Part of CSS collection view 2
   background-color: #222222;
 }
 
-.collection-basicinfos__container {
+.collection-basicinfos__container,
+.view2-basicinfos__container,
+.view3-basicinfos__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2751,29 +2319,30 @@ First Part of CSS collection view 2
   padding: 5px;
 }
 
-.collection-arrow {
+.collection-arrow,
+.view2-arrow,
+.view3-arrow {
   position: absolute;
   right: 0px;
 }
 
-.collection-items__title {
+.collection-items__title,
+.view2-items__title,
+.view3-items__title {
   border-radius: 5px;
   word-break: break-word;
+  font-size: 12px;
   margin: 0 6px;
   background-color: #FFFFFF;
+  text-align: left;
+  font-family: "PTSans-Bold";
 }
-.collection-items__title h3 {
+.collection-items__title h3,
+.view2-items__title h3,
+.view3-items__title h3 {
   margin-top: auto;
   margin-bottom: auto;
   padding: 5px;
-}
-
-.collection-items__subtitle,
-.collection-items__editor,
-.collection-items__year,
-.collection-items__plateform {
-  padding: 2px;
-  margin-right: 5%;
 }
 
 .bot-items__subcontainer {
